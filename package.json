@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "tests": "mocha",
+    "test": "mocha",
     "start": "node ./bin/www",
     "db-api": "cd db-api;PORT=8080 npm start",
     "mongostart": "docker run -p 127.0.0.1:27017:27017 --name mymongo -d mongo",
