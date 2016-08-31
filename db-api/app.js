@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
+var students = require('./routes/students');
 
 var app = express();
 
@@ -23,7 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+//app.use('/users', users);
+app.use('/students', students);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -55,6 +57,12 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/t4i')
+  .then(() =>  console.log('mongodb connection to t4i db succesful'))
+  .catch((err) => console.error(err));
 
 
 module.exports = app;
