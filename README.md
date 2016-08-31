@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/axiomiety/c4c_t4i.svg?branch=master)](https://travis-ci.org/axiomiety/c4c_t4i)
+
 # Code For Change - Teach For India
 
 ## Dependencies
