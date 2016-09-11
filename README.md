@@ -24,6 +24,16 @@ The last command should have the output below:
 
 Use `npm run tests` or `mocha`.
 
+## MongoDB
+
+### With Docker
+
+If you're using a Mac, there are some caveats as Docker needs to run inside a VM - meaning if you're trying to access the docker container *outside* of the VM (say by doing all your dev work *inside* a VM), you'll need to play around with port forwarding etc... @sharma-shweta has some more information.
+
+### Importing sample objects
+
+We don't want to write schemas by hand - really. Use something like `$ mongoimport --jsonArray -d t4i -c questionset --file utils/dbobjects/question_set.json` to import the data directly into mongo.
+
 # Outstanding tasks
 
 - [ ] use `nodemon` to automatically pick up changes to `db-api`

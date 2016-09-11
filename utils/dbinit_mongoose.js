@@ -10,6 +10,6 @@ Student.create( student1, function(err, student) {
   } else {
     console.log(student);
   }
+  process.exit(); // thanks to SHWT
 });
 
-process.exit();
