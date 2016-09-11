@@ -32,7 +32,9 @@ If you're using a Mac, there are some caveats as Docker needs to run inside a VM
 
 ### Importing sample objects
 
-We don't want to write schemas by hand - really. Use something like `$ mongoimport --jsonArray -d t4i -c questionset --file utils/dbobjects/question_set.json` to import the data directly into mongo.
+We don't want to write schemas by hand - really. Use something like `$ mongoimport --jsonArray -d t4i -c questionsets --file utils/dbobjects/question_set.json` to import the data directly into mongo.
+
+Note that for `mongoose`, the collection name is usually the plural of the model name - so QuestionSet goes into the questionsets collection.
 
 # Outstanding tasks
 
@@ -40,3 +42,4 @@ We don't want to write schemas by hand - really. Use something like `$ mongoimpo
 - [ ] use `grunt` instead of `npm` for all the wiring?
 - [ ] save the mongodb data locally and mount through the container
 - [ ] authentication much?
+- [X] provide a way to generate models based on sample objects (did this for `QuestionSet` - should be easy to replicate)
