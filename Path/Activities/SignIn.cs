@@ -7,20 +7,20 @@ namespace Path
 	[Activity(Label = "Path", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
 			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.Main);
+			SetContentView(Resource.Layout.SignIn);
 
 			// Get our button from the layout resource,
 			// and attach an event to it
-			Button button = FindViewById<Button>(Resource.Id.myButton);
+			ImageButton signIn = FindViewById<ImageButton>(Resource.Id.loginbutton);
 
-			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+			signIn.Click += delegate {
+				StartActivity(typeof(Welcome));
+			};
 		}
 	}
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/choose_lang">
+    <TextView
+        android:text="Select your Country"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectcountry"
+        android:gravity="center"
+        android:typeface="normal"
+        android:textColor="#ffffffff"
+        android:layout_marginTop="120dp"
+        android:textSize="@dimen/abc_text_size_headline_material" />
+    <SearchView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="258.7dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchCountry"
+        android:baselineAligned="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="0.0dp"
+        android:layout_gravity="center"
+        android:measureWithLargestChild="false" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="200dp"
+        android:layout_height="191.7dp"
+        android:id="@+id/countryList"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="0.0dp"
+        android:layout_marginLeft="0.0dp" />
+    <ImageButton
+        android:id="@+id/nextbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/next_button"
+        android:background="@null"
+        android:layout_marginTop="70dp" />
+</LinearLayout>
