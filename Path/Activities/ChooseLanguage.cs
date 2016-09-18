@@ -13,9 +13,10 @@ using Android.Widget;
 
 namespace Path
 {
-	[Activity(Label = "ChooseLanguage")]
-	public class ChooseLanguage : Activity
+	[Activity(Label = "Choose Language")]
+	public class ChooseLanguage : ListActivity
 	{
+		string[] items;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -23,7 +24,12 @@ namespace Path
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.ChooseLanguage);
 
-			// Create your application here
+			//var phoneNumbers = Intent.Extras.GetStringArrayList("phone_numbers") ?? new string[0];
+			//this.ListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, phoneNumbers);
+
+			items = new string[] { "English", "Hindi", "Tamil" };
+			ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
+
 		}
 	}
 }

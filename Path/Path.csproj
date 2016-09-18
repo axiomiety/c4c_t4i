@@ -78,6 +78,7 @@
     <AndroidResource Include="Resources\drawable\login_button.png" />
     <AndroidResource Include="Resources\drawable\choose_lang.png" />
     <AndroidResource Include="Resources\drawable\next_button.png" />
+    <AndroidResource Include="Resources\drawable\select_location.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
