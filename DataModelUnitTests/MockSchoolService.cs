@@ -87,6 +87,42 @@ namespace DataModelUnitTests
             }
         }
 
+        public string Email { get; set; }
+        public ITeacher Teacher { get; set; }
+        public IClass Class { get; set; }
+        public IList<ISubject> Subjects {
+            get
+            {
+                return this.Class != null ? this.Class.Subjects : null;
+            }
+        }
+        public ISchool School {
+            get
+            {
+                return this.Class != null ? this.Class.School : null;
+            }
+        }
+        public string Country {
+            get
+            {
+                return this.School != null ? this.School.Country : "";
+            }
+        }
+        public string State {
+            get
+            {
+                return this.School != null ? this.School.State : "";
+            }
+        }
+        public string City {
+            get
+            {
+                return this.School != null ? this.School.City : "";
+            }
+        }
+
+
+
         public IList<string> GetCountries()
         {
             var query = from ISchool school in Schools
@@ -120,7 +156,7 @@ namespace DataModelUnitTests
             school.Save();
             return school;
         }
-        public ITeacher AddTeacher(string id, string name, string mail, string phone, IClass cls, IList<ISubject> subjects)
+        public ITeacher MapTeacher(string mail, string name, string phone, IClass cls, IList<ISubject> subjects)
         {
             Teacher teacher = new Teacher(this, name, mail, phone);
             foreach (ISubject subject in subjects)
@@ -129,7 +165,7 @@ namespace DataModelUnitTests
             }
             return teacher;
         }
-        public ITeacher GetTeacher(string id)
+        public ITeacher GetTeacher(string mail)
         {
             throw new NotImplementedException();
         }

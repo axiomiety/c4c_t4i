@@ -1552,11 +1552,14 @@ namespace Path
 			// aapt resource value: 0x7f0c0038
 			public const int expanded_menu = 2131492920;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int getStartedButton = 2131492968;
+			// aapt resource value: 0x7f0c006d
+			public const int getStartedButton = 2131492973;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int helloUser = 2131492964;
+			// aapt resource value: 0x7f0c0061
+			public const int gridLayout1 = 2131492961;
+			
+			// aapt resource value: 0x7f0c0069
+			public const int helloUser = 2131492969;
 			
 			// aapt resource value: 0x7f0c0004
 			public const int home = 2131492868;
@@ -1588,8 +1591,14 @@ namespace Path
 			// aapt resource value: 0x7f0c0028
 			public const int list_item = 2131492904;
 			
+			// aapt resource value: 0x7f0c0068
+			public const int loginbutton = 2131492968;
+			
 			// aapt resource value: 0x7f0c0063
-			public const int loginbutton = 2131492963;
+			public const int lvCountry = 2131492963;
+			
+			// aapt resource value: 0x7f0c0065
+			public const int lvStates = 2131492965;
 			
 			// aapt resource value: 0x7f0c0057
 			public const int media_actions = 2131492951;
@@ -1615,8 +1624,8 @@ namespace Path
 			// aapt resource value: 0x7f0c002d
 			public const int parentPanel = 2131492909;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int pathtitle = 2131492961;
+			// aapt resource value: 0x7f0c0066
+			public const int pathtitle = 2131492966;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int progress_circular = 2131492869;
@@ -1714,8 +1723,8 @@ namespace Path
 			// aapt resource value: 0x7f0c000b
 			public const int tabMode = 2131492875;
 			
-			// aapt resource value: 0x7f0c0062
-			public const int teacherstitle = 2131492962;
+			// aapt resource value: 0x7f0c0067
+			public const int teacherstitle = 2131492967;
 			
 			// aapt resource value: 0x7f0c005e
 			public const int text = 2131492958;
@@ -1726,14 +1735,14 @@ namespace Path
 			// aapt resource value: 0x7f0c0034
 			public const int textSpacerNoButtons = 2131492916;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int textView2 = 2131492965;
+			// aapt resource value: 0x7f0c006a
+			public const int textView2 = 2131492970;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int textView3 = 2131492966;
+			// aapt resource value: 0x7f0c006b
+			public const int textView3 = 2131492971;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int textView4 = 2131492967;
+			// aapt resource value: 0x7f0c006c
+			public const int textView4 = 2131492972;
 			
 			// aapt resource value: 0x7f0c005a
 			public const int time = 2131492954;
@@ -1746,6 +1755,12 @@ namespace Path
 			
 			// aapt resource value: 0x7f0c002e
 			public const int topPanel = 2131492910;
+			
+			// aapt resource value: 0x7f0c0062
+			public const int txtCountry = 2131492962;
+			
+			// aapt resource value: 0x7f0c0064
+			public const int txtState = 2131492964;
 			
 			// aapt resource value: 0x7f0c0008
 			public const int up = 2131492872;
@@ -1903,22 +1918,25 @@ namespace Path
 			public const int notification_template_part_time = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int select_dialog_item_material = 2130968610;
+			public const int SampleLayout = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int select_dialog_multichoice_material = 2130968611;
+			public const int select_dialog_item_material = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int select_dialog_singlechoice_material = 2130968612;
+			public const int select_dialog_multichoice_material = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int SignIn = 2130968613;
+			public const int select_dialog_singlechoice_material = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int support_simple_spinner_dropdown_item = 2130968614;
+			public const int SignIn = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int Welcome = 2130968615;
+			public const int support_simple_spinner_dropdown_item = 2130968615;
+			
+			// aapt resource value: 0x7f040028
+			public const int Welcome = 2130968616;
 			
 			static Layout()
 			{
