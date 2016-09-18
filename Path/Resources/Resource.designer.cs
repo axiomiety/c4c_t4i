@@ -1411,28 +1411,52 @@ namespace Path
 			public const int abc_textfield_search_material = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int choose_lang = 2130837573;
+			public const int cake = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int getstarted_button = 2130837574;
+			public const int choose_lang = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int login_button = 2130837575;
+			public const int classroom = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int next_button = 2130837576;
-			
-			// aapt resource value: 0x7f02004c
-			public const int notification_template_icon_bg = 2130837580;
+			public const int gender_icon = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int select_location = 2130837577;
+			public const int getstarted_button = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int signin = 2130837578;
+			public const int login_button = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int welcome = 2130837579;
+			public const int more_info_f = 2130837579;
+			
+			// aapt resource value: 0x7f02004c
+			public const int more_info_m = 2130837580;
+			
+			// aapt resource value: 0x7f02004d
+			public const int next_button = 2130837581;
+			
+			// aapt resource value: 0x7f020054
+			public const int notification_template_icon_bg = 2130837588;
+			
+			// aapt resource value: 0x7f02004e
+			public const int select_location = 2130837582;
+			
+			// aapt resource value: 0x7f02004f
+			public const int select_school = 2130837583;
+			
+			// aapt resource value: 0x7f020050
+			public const int signin = 2130837584;
+			
+			// aapt resource value: 0x7f020051
+			public const int telephone = 2130837585;
+			
+			// aapt resource value: 0x7f020052
+			public const int tick = 2130837586;
+			
+			// aapt resource value: 0x7f020053
+			public const int welcome = 2130837587;
 			
 			static Drawable()
 			{
