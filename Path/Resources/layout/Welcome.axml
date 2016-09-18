@@ -9,7 +9,7 @@
         android:text="Hey (User)!"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:id="@+id/helloUser"
         android:gravity="center"
         android:textColor="#ffffffff"

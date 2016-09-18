@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.OS;
 using Android.Widget;
 
@@ -13,8 +14,11 @@ namespace Path
 
 			SetContentView(Resource.Layout.SelectSchoolLocation);
 
-			//ImageButton getStartedButton = FindViewById<ImageButton>(Resource.Id.getStartedButton);
-
+			// Auto complete feature trying out
+			var autoCompleteOptions = new String[] { "Hello", "Hey", "Heja", "Hi", "Hola", "Bonjour", "Gday", "Goodbye", "Sayonara", "Farewell", "Adios" };
+			ArrayAdapter autoCompleteAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleDropDownItem1Line, autoCompleteOptions);
+			var autocompleteTextView = FindViewById<AutoCompleteTextView>(Resource.Id.schoolCountry);
+			autocompleteTextView.Adapter = autoCompleteAdapter;
 		}
 	}
 }

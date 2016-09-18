@@ -82,6 +82,14 @@
     <AndroidResource Include="Resources\drawable\select_location.png" />
     <AndroidResource Include="Resources\layout\SelectSchoolLocation.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\cake.png" />
+    <AndroidResource Include="Resources\drawable\classroom.png" />
+    <AndroidResource Include="Resources\drawable\gender_icon.png" />
+    <AndroidResource Include="Resources\drawable\more_info_f.png" />
+    <AndroidResource Include="Resources\drawable\more_info_m.png" />
+    <AndroidResource Include="Resources\drawable\select_school.png" />
+    <AndroidResource Include="Resources\drawable\telephone.png" />
+    <AndroidResource Include="Resources\drawable\tick.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
