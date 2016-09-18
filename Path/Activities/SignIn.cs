@@ -4,7 +4,8 @@ using Android.OS;
 
 namespace Path
 {
-	[Activity(Label = "Path", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity(Label = "Path", MainLauncher = true, Icon = "@mipmap/icon", 
+	          Theme = "@android:style/Theme.Material.Light.NoActionBar.Fullscreen")]
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)

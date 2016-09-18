@@ -1552,11 +1552,11 @@ namespace Path
 			// aapt resource value: 0x7f0c0038
 			public const int expanded_menu = 2131492920;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int getStartedButton = 2131492967;
+			// aapt resource value: 0x7f0c006d
+			public const int getStartedButton = 2131492973;
 			
-			// aapt resource value: 0x7f0c0063
-			public const int helloUser = 2131492963;
+			// aapt resource value: 0x7f0c0069
+			public const int helloUser = 2131492969;
 			
 			// aapt resource value: 0x7f0c0004
 			public const int home = 2131492868;
@@ -1576,6 +1576,9 @@ namespace Path
 			// aapt resource value: 0x7f0c005e
 			public const int info = 2131492958;
 			
+			// aapt resource value: 0x7f0c0052
+			public const int langNext = 2131492946;
+			
 			// aapt resource value: 0x7f0c0058
 			public const int line1 = 2131492952;
 			
@@ -1588,8 +1591,8 @@ namespace Path
 			// aapt resource value: 0x7f0c0028
 			public const int list_item = 2131492904;
 			
-			// aapt resource value: 0x7f0c0062
-			public const int loginbutton = 2131492962;
+			// aapt resource value: 0x7f0c0068
+			public const int loginbutton = 2131492968;
 			
 			// aapt resource value: 0x7f0c0056
 			public const int media_actions = 2131492950;
@@ -1603,9 +1606,6 @@ namespace Path
 			// aapt resource value: 0x7f0c001e
 			public const int never = 2131492894;
 			
-			// aapt resource value: 0x7f0c0052
-			public const int nextbutton = 2131492946;
-			
 			// aapt resource value: 0x7f0c000e
 			public const int none = 2131492878;
 			
@@ -1615,8 +1615,8 @@ namespace Path
 			// aapt resource value: 0x7f0c002d
 			public const int parentPanel = 2131492909;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int pathtitle = 2131492960;
+			// aapt resource value: 0x7f0c0066
+			public const int pathtitle = 2131492966;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int progress_circular = 2131492869;
@@ -1626,6 +1626,24 @@ namespace Path
 			
 			// aapt resource value: 0x7f0c003b
 			public const int radio = 2131492923;
+			
+			// aapt resource value: 0x7f0c0064
+			public const int school = 2131492964;
+			
+			// aapt resource value: 0x7f0c0063
+			public const int schoolCity = 2131492963;
+			
+			// aapt resource value: 0x7f0c0061
+			public const int schoolCountry = 2131492961;
+			
+			// aapt resource value: 0x7f0c0060
+			public const int schoolDetails = 2131492960;
+			
+			// aapt resource value: 0x7f0c0065
+			public const int schoolNext = 2131492965;
+			
+			// aapt resource value: 0x7f0c0062
+			public const int schoolState = 2131492962;
 			
 			// aapt resource value: 0x7f0c0014
 			public const int screen = 2131492884;
@@ -1714,8 +1732,8 @@ namespace Path
 			// aapt resource value: 0x7f0c000b
 			public const int tabMode = 2131492875;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int teacherstitle = 2131492961;
+			// aapt resource value: 0x7f0c0067
+			public const int teacherstitle = 2131492967;
 			
 			// aapt resource value: 0x7f0c005d
 			public const int text = 2131492957;
@@ -1726,14 +1744,14 @@ namespace Path
 			// aapt resource value: 0x7f0c0034
 			public const int textSpacerNoButtons = 2131492916;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int textView2 = 2131492964;
+			// aapt resource value: 0x7f0c006a
+			public const int textView2 = 2131492970;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int textView3 = 2131492965;
+			// aapt resource value: 0x7f0c006b
+			public const int textView3 = 2131492971;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int textView4 = 2131492966;
+			// aapt resource value: 0x7f0c006c
+			public const int textView4 = 2131492972;
 			
 			// aapt resource value: 0x7f0c0059
 			public const int time = 2131492953;
@@ -1912,13 +1930,16 @@ namespace Path
 			public const int select_dialog_singlechoice_material = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int SignIn = 2130968613;
+			public const int SelectSchoolLocation = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int support_simple_spinner_dropdown_item = 2130968614;
+			public const int SignIn = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int Welcome = 2130968615;
+			public const int support_simple_spinner_dropdown_item = 2130968615;
+			
+			// aapt resource value: 0x7f040028
+			public const int Welcome = 2130968616;
 			
 			static Layout()
 			{
@@ -2459,6 +2480,9 @@ namespace Path
 			
 			// aapt resource value: 0x7f090073
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131296371;
+			
+			// aapt resource value: 0x7f090133
+			public const int MatLightNoActionBar = 2131296563;
 			
 			// aapt resource value: 0x7f090010
 			public const int Platform_AppCompat = 2131296272;

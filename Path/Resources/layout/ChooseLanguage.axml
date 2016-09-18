@@ -30,15 +30,17 @@
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="258.7dp"
+        android:layout_height="150dp"
         android:id="@android:id/list"
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:requiresFadingEdge="none"
-        android:fadingEdge="none" />
+        android:fadingEdge="none"
+        android:divider="#ffffffff"
+        android:dividerHeight="0.5dp" />
     <ImageButton
-        android:id="@+id/nextbutton"
+        android:id="@+id/langNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

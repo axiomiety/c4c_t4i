@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 using Android.App;
 using Android.OS;
@@ -7,7 +6,7 @@ using Android.Widget;
 
 namespace Path
 {
-	[Activity(Label = "Choose Language")]
+	[Activity(Label = "Choose Language", Theme = "@style/MatLightNoActionBar")]
 	public class ChooseLanguage : ListActivity
 	{
 		string[] items;
@@ -20,6 +19,12 @@ namespace Path
 			items = new string[] { "English", "Hindi", "Tamil" };
 			ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
 
+			ImageButton next = FindViewById<ImageButton>(Resource.Id.langNext);
+
+			next.Click += delegate
+			{
+				StartActivity(typeof(SelectSchoolLocation));
+			};
 		}
 	}
 }
