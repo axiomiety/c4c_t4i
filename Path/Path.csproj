@@ -61,6 +61,7 @@
     <Compile Include="Activities\SignIn.cs" />
     <Compile Include="Activities\Welcome.cs" />
     <Compile Include="SampleActivity.cs" />
+    <Compile Include="Activities\SelectSchoolLocation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -87,6 +88,9 @@
     <AndroidResource Include="Resources\drawable\login_button.png" />
     <AndroidResource Include="Resources\drawable\choose_lang.png" />
     <AndroidResource Include="Resources\drawable\next_button.png" />
+    <AndroidResource Include="Resources\drawable\select_location.png" />
+    <AndroidResource Include="Resources\layout\SelectSchoolLocation.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataModels\DataModels.csproj">
