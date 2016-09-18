@@ -11,11 +11,8 @@ namespace Path
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.SignIn);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
 			ImageButton signIn = FindViewById<ImageButton>(Resource.Id.loginbutton);
 
 			signIn.Click += delegate {
