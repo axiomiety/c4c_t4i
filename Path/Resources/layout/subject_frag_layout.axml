@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_contact_placeholder"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="2"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+    <TextView
+        android:text="Select the subjects that you'll be teaching"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:id="@+id/teacher_contact_text"
+        android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+    <CheckBox
+        android:text="English"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/english_checkbox" />
+    <CheckBox
+        android:text="Maths"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/math_checkbox" />
+    <ImageButton
+        android:id="@+id/subject_tick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/tick"
+        android:background="@null"
+        android:paddingBottom="20dp" />
+</LinearLayout>

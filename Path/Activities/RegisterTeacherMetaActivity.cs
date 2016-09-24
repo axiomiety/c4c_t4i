@@ -44,7 +44,7 @@ namespace Path
 
 			ImageButton next = FindViewById<ImageButton>(Resource.Id.metaNext);
 
-			next.Click += (sender, e) => { toNextFrag(); };
+			next.Click += (sender, e) => { toNextFragOrActivity(); };
 		}
 
 		public override void OnBackPressed()
@@ -71,7 +71,7 @@ namespace Path
 			currFragment = f;
 		}
 
-		private void toNextFrag()
+		private void toNextFragOrActivity()
 		{
 			if (currFragment == genderFragment)
 			{
@@ -83,6 +83,7 @@ namespace Path
 			}
 			else if (currFragment == dobFragment)
 			{
+				StartActivity(typeof(SelectClassroomActivity));
 			}
 			
 		}
