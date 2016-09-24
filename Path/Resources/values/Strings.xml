@@ -2,4 +2,9 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">Path</string>
+	<string-array name="gender_dropdown_array">
+		<item>Please choose</item>
+		<item>Male</item>
+		<item>Female</item>
+	</string-array>
 </resources>
