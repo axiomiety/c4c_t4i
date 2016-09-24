@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_contact_placeholder"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+        <TextView
+            android:text="Contact"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:gravity="bottom"
+            android:textAlignment="gravity"
+            android:id="@+id/teacher_contact_text"
+            android:textAppearance="@android:style/TextAppearance.Material.Display1"
+            android:paddingLeft="20dp" />
+        <ImageView
+            android:src="@drawable/telephone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:id="@+id/teacher_contact_imgview"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="0.0dp"
+            android:paddingTop="2dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <EditText
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/teacher_contact_number"
+            android:layout_weight="2"
+            android:paddingLeft="20dp"
+            android:singleLine="true"
+            android:phoneNumber="true" />
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:minWidth="25px"
+            android:minHeight="25px" />
+    </LinearLayout>
+</LinearLayout>

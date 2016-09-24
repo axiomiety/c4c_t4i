@@ -39,3 +39,12 @@ jspm_packages
 
 # vim swap files
 *.swp
+
+
+# Xamarin
+*.pidb
+*.userprefs
+bin
+obj
+.DS_Store
+*.suo
