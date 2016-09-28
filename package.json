@@ -4,19 +4,13 @@
   "private": true,
   "scripts": {
     "test": "mocha",
-    "start": "node ./bin/www",
     "db-api": "cd db-api;PORT=8080 npm start",
     "mongostart": "docker run -p 127.0.0.1:27017:27017 --name mymongo -d mongo",
     "mongostop": "docker stop mymongo;docker rm mymongo",
     "dbinit": "cd db-api;nodejs utils/dbinit_mongoose.js"
   },
   "dependencies": {
-    "body-parser": "~1.15.1",
     "chai": "^3.5.0",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "ejs": "~2.4.1",
-    "express": "~4.13.4",
     "generate-schema": "^2.1.1",
     "json-schema-converter": "0.0.4",
     "json-schema-to-mongoose": "^0.2.2",
