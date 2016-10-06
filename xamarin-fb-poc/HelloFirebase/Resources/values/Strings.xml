@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">HelloFirebase</string>
+
+  <!-- UI Strings -->
+  <string name="SignIn">Sign In</string>
+  <string name="SignOut">Sign Out</string>
+  <string name="RevokeAccess">Revoke Access</string>
+  <string name="SubscribeToNews">Subscribe To News</string>
+  <string name="LogToken">Log Token</string>
+  
+  <!-- Firebase MY TEST APP Setings -->
+  <string name="FBApplicationName">hellofb-b005f</string>
+  <string name="FBServerClientId">79941882991-j3jp0ha77c0j6sfn791u41v7rjfmov0d.apps.googleusercontent.com</string>
+  <string name="FBApiKey">AIzaSyBlP8nGeKUpoKCVL7-IPjSdQe1hqnZ-3b0</string>
+  <string name="FBApplicationId">1:79941882991:android:3c96da6bcaebde51</string>
+  <string name="FBDatabaseUrl">https://hellofb-b005f.firebaseio.com</string>
+  <string name="FBSenderId">79941882991</string>
+  <string name="FBServerKey">Should not be included</string>
+
+  <!-- Firebase C4C T4I App Setings -->
+  <string name="ApplicationName">c4c-t4i</string>
+  <string name="ServerClientId">338211353991-urcc5h7gfd5qoppndv23a2vkqb5f6m1e.apps.googleusercontent.com</string>
+  <string name="ApiKey">AIzaSyBNUiwOjLnILeorZzGbZ-Gy787zCfi0Ef8</string>
+  <string name="ApplicationId">1:338211353991:android:3c96da6bcaebde51</string>
+  <string name="DatabaseUrl">https://c4c-t4i.firebaseio.com</string>
+
+</resources>
