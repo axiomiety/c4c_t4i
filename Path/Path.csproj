@@ -15,7 +15,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +42,7 @@
       <HintPath>..\packages\Autofac.4.1.0\lib\netstandard1.1\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -62,6 +63,7 @@
     <Compile Include="Activities\Welcome.cs" />
     <Compile Include="SampleActivity.cs" />
     <Compile Include="Activities\SelectSchoolLocation.cs" />
+    <Compile Include="Setup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -102,15 +104,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataModels\DataModels.csproj">
-      <Project>{22e65b98-fc56-4db3-b60e-f9d8745ac69f}</Project>
+      <Project>{04f7700a-9dd6-4074-8317-f34a31e2db99}</Project>
       <Name>DataModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\PathDataModels\PathDataModels.csproj">
-      <Project>{7c3216dd-b168-4423-875a-b63b6e42a944}</Project>
+      <Project>{5c2cf991-2df4-4e30-8ece-a3c0cdebb318}</Project>
       <Name>PathDataModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\PathViewModels\PathViewModels.csproj">
-      <Project>{6dad7ddc-52a8-4cfe-9df9-4a702cc76dcf}</Project>
+      <Project>{ed6738ad-e429-4c71-93f8-e4c17e760ff8}</Project>
       <Name>PathViewModels</Name>
     </ProjectReference>
   </ItemGroup>
