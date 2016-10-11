@@ -85,6 +85,11 @@ namespace PathViewModels
             }
         }
 
+        public IList<ISchool> AllSchools
+        {
+            get { return this._service.Schools; }
+        }
+
         public IList<ISchool> Schools
         {
             get { return this._service.GetSchools(this.Country, this.State, this.City); }
