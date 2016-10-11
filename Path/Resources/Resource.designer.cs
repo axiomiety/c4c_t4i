@@ -71,6 +71,28 @@ namespace Path
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0d0000
+			public const int gender_dropdown_array = 2131558400;
+			
+			// aapt resource value: 0x7f0d0001
+			public const int grade_array = 2131558401;
+			
+			// aapt resource value: 0x7f0d0002
+			public const int section_array = 2131558402;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -1471,8 +1493,8 @@ namespace Path
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c0053
-			public const int action0 = 2131492947;
+			// aapt resource value: 0x7f0c0055
+			public const int action0 = 2131492949;
 			
 			// aapt resource value: 0x7f0c0041
 			public const int action_bar = 2131492929;
@@ -1498,8 +1520,8 @@ namespace Path
 			// aapt resource value: 0x7f0c0042
 			public const int action_context_bar = 2131492930;
 			
-			// aapt resource value: 0x7f0c0057
-			public const int action_divider = 2131492951;
+			// aapt resource value: 0x7f0c0059
+			public const int action_divider = 2131492953;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -1531,14 +1553,20 @@ namespace Path
 			// aapt resource value: 0x7f0c002b
 			public const int buttonPanel = 2131492907;
 			
-			// aapt resource value: 0x7f0c0054
-			public const int cancel_action = 2131492948;
+			// aapt resource value: 0x7f0c0069
+			public const int button_select_date = 2131492969;
+			
+			// aapt resource value: 0x7f0c0056
+			public const int cancel_action = 2131492950;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int checkbox = 2131492921;
 			
-			// aapt resource value: 0x7f0c005a
-			public const int chronometer = 2131492954;
+			// aapt resource value: 0x7f0c005c
+			public const int chronometer = 2131492956;
+			
+			// aapt resource value: 0x7f0c0075
+			public const int classroom_meta_frag_container = 2131492981;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int collapseActionView = 2131492892;
@@ -1567,8 +1595,11 @@ namespace Path
 			// aapt resource value: 0x7f0c0019
 			public const int end = 2131492889;
 			
-			// aapt resource value: 0x7f0c005f
-			public const int end_padder = 2131492959;
+			// aapt resource value: 0x7f0c0061
+			public const int end_padder = 2131492961;
+			
+			// aapt resource value: 0x7f0c007f
+			public const int english_checkbox = 2131492991;
 			
 			// aapt resource value: 0x7f0c0025
 			public const int expand_activities_button = 2131492901;
@@ -1576,14 +1607,17 @@ namespace Path
 			// aapt resource value: 0x7f0c0038
 			public const int expanded_menu = 2131492920;
 			
-			// aapt resource value: 0x7f0c006d
-			public const int getStartedButton = 2131492973;
+			// aapt resource value: 0x7f0c0086
+			public const int getStartedButton = 2131492998;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int gridLayout1 = 2131492961;
+			// aapt resource value: 0x7f0c0054
+			public const int grade_section_next = 2131492948;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int helloUser = 2131492969;
+			// aapt resource value: 0x7f0c0070
+			public const int gridLayout1 = 2131492976;
+			
+			// aapt resource value: 0x7f0c0082
+			public const int helloUser = 2131492994;
 			
 			// aapt resource value: 0x7f0c0004
 			public const int home = 2131492868;
@@ -1600,17 +1634,17 @@ namespace Path
 			// aapt resource value: 0x7f0c0026
 			public const int image = 2131492902;
 			
-			// aapt resource value: 0x7f0c005e
-			public const int info = 2131492958;
+			// aapt resource value: 0x7f0c0060
+			public const int info = 2131492960;
 			
 			// aapt resource value: 0x7f0c0052
 			public const int langNext = 2131492946;
 			
-			// aapt resource value: 0x7f0c0058
-			public const int line1 = 2131492952;
+			// aapt resource value: 0x7f0c005a
+			public const int line1 = 2131492954;
 			
-			// aapt resource value: 0x7f0c005c
-			public const int line3 = 2131492956;
+			// aapt resource value: 0x7f0c005e
+			public const int line3 = 2131492958;
 			
 			// aapt resource value: 0x7f0c0009
 			public const int listMode = 2131492873;
@@ -1618,17 +1652,23 @@ namespace Path
 			// aapt resource value: 0x7f0c0028
 			public const int list_item = 2131492904;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int loginbutton = 2131492968;
+			// aapt resource value: 0x7f0c007e
+			public const int loginbutton = 2131492990;
 			
-			// aapt resource value: 0x7f0c0063
-			public const int lvCountry = 2131492963;
+			// aapt resource value: 0x7f0c0072
+			public const int lvCountry = 2131492978;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int lvStates = 2131492965;
+			// aapt resource value: 0x7f0c0074
+			public const int lvStates = 2131492980;
 			
-			// aapt resource value: 0x7f0c0056
-			public const int media_actions = 2131492950;
+			// aapt resource value: 0x7f0c0080
+			public const int math_checkbox = 2131492992;
+			
+			// aapt resource value: 0x7f0c0058
+			public const int media_actions = 2131492952;
+			
+			// aapt resource value: 0x7f0c006f
+			public const int metaNext = 2131492975;
 			
 			// aapt resource value: 0x7f0c001a
 			public const int middle = 2131492890;
@@ -1648,8 +1688,8 @@ namespace Path
 			// aapt resource value: 0x7f0c002d
 			public const int parentPanel = 2131492909;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int pathtitle = 2131492966;
+			// aapt resource value: 0x7f0c007c
+			public const int pathtitle = 2131492988;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int progress_circular = 2131492869;
@@ -1660,23 +1700,35 @@ namespace Path
 			// aapt resource value: 0x7f0c003b
 			public const int radio = 2131492923;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int school = 2131492964;
-			
-			// aapt resource value: 0x7f0c0063
-			public const int schoolCity = 2131492963;
-			
-			// aapt resource value: 0x7f0c0061
-			public const int schoolCountry = 2131492961;
-			
-			// aapt resource value: 0x7f0c0060
-			public const int schoolDetails = 2131492960;
-			
-			// aapt resource value: 0x7f0c0065
-			public const int schoolNext = 2131492965;
-			
 			// aapt resource value: 0x7f0c0062
-			public const int schoolState = 2131492962;
+			public const int register_contact_placeholder = 2131492962;
+			
+			// aapt resource value: 0x7f0c0066
+			public const int register_dob_placeholder = 2131492966;
+			
+			// aapt resource value: 0x7f0c006a
+			public const int register_gender_placeholder = 2131492970;
+			
+			// aapt resource value: 0x7f0c006d
+			public const int register_meta_imgView = 2131492973;
+			
+			// aapt resource value: 0x7f0c007a
+			public const int school = 2131492986;
+			
+			// aapt resource value: 0x7f0c0079
+			public const int schoolCity = 2131492985;
+			
+			// aapt resource value: 0x7f0c0077
+			public const int schoolCountry = 2131492983;
+			
+			// aapt resource value: 0x7f0c0076
+			public const int schoolDetails = 2131492982;
+			
+			// aapt resource value: 0x7f0c007b
+			public const int schoolNext = 2131492987;
+			
+			// aapt resource value: 0x7f0c0078
+			public const int schoolState = 2131492984;
 			
 			// aapt resource value: 0x7f0c0014
 			public const int screen = 2131492884;
@@ -1756,8 +1808,11 @@ namespace Path
 			// aapt resource value: 0x7f0c0017
 			public const int src_over = 2131492887;
 			
-			// aapt resource value: 0x7f0c0055
-			public const int status_bar_latest_event_content = 2131492949;
+			// aapt resource value: 0x7f0c0057
+			public const int status_bar_latest_event_content = 2131492951;
+			
+			// aapt resource value: 0x7f0c0081
+			public const int subject_tick = 2131492993;
 			
 			// aapt resource value: 0x7f0c004c
 			public const int submit_area = 2131492940;
@@ -1765,29 +1820,56 @@ namespace Path
 			// aapt resource value: 0x7f0c000b
 			public const int tabMode = 2131492875;
 			
+			// aapt resource value: 0x7f0c0064
+			public const int teacher_contact_imgview = 2131492964;
+			
+			// aapt resource value: 0x7f0c0065
+			public const int teacher_contact_number = 2131492965;
+			
+			// aapt resource value: 0x7f0c0063
+			public const int teacher_contact_text = 2131492963;
+			
+			// aapt resource value: 0x7f0c0068
+			public const int teacher_dob_imgview = 2131492968;
+			
 			// aapt resource value: 0x7f0c0067
-			public const int teacherstitle = 2131492967;
+			public const int teacher_dob_text = 2131492967;
+			
+			// aapt resource value: 0x7f0c0053
+			public const int teacher_gender_dropdown_spinner = 2131492947;
+			
+			// aapt resource value: 0x7f0c006c
+			public const int teacher_gender_imgview = 2131492972;
+			
+			// aapt resource value: 0x7f0c006b
+			public const int teacher_gender_text = 2131492971;
+			
+			// aapt resource value: 0x7f0c006e
+			public const int teacher_meta_frag_container = 2131492974;
+			
+			// aapt resource value: 0x7f0c007d
+			public const int teacherstitle = 2131492989;
+			
+			// aapt resource value: 0x7f0c005f
+			public const int text = 2131492959;
 			
 			// aapt resource value: 0x7f0c005d
-			public const int text = 2131492957;
-			
-			// aapt resource value: 0x7f0c005b
-			public const int text2 = 2131492955;
+			public const int text2 = 2131492957;
 			
 			// aapt resource value: 0x7f0c0034
 			public const int textSpacerNoButtons = 2131492916;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int textView2 = 2131492970;
+			// aapt resource value: 0x7f0c0083
+			public const int textView2 = 2131492995;
 			
-			// aapt resource value: 0x7f0c006b
-			public const int textView3 = 2131492971;
+			// aapt resource value: 0x7f0c0084
+			public const int textView3 = 2131492996;
 			
-			// aapt resource value: 0x7f0c006c
-			public const int textView4 = 2131492972;
+			// aapt resource value: 0x7f0c0085
+			public const int textView4 = 2131492997;
 			
-			// aapt resource value: 0x7f0c0059
-			public const int time = 2131492953;
+			// aapt resource value: 0x7f0c005b
+			public const int time = 2131492955;
 			
 			// aapt resource value: 0x7f0c002a
 			public const int title = 2131492906;
@@ -1798,11 +1880,11 @@ namespace Path
 			// aapt resource value: 0x7f0c002e
 			public const int topPanel = 2131492910;
 			
-			// aapt resource value: 0x7f0c0062
-			public const int txtCountry = 2131492962;
+			// aapt resource value: 0x7f0c0071
+			public const int txtCountry = 2131492977;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int txtState = 2131492964;
+			// aapt resource value: 0x7f0c0073
+			public const int txtState = 2131492979;
 			
 			// aapt resource value: 0x7f0c0008
 			public const int up = 2131492872;
@@ -1936,51 +2018,73 @@ namespace Path
 			public const int ChooseLanguage = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int notification_media_action = 2130968602;
+			public const int class_grade_section_frag_layout = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int notification_media_cancel_action = 2130968603;
+			public const int notification_media_action = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int notification_template_big_media = 2130968604;
+			public const int notification_media_cancel_action = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int notification_template_big_media_narrow = 2130968605;
+			public const int notification_template_big_media = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int notification_template_lines = 2130968606;
+			public const int notification_template_big_media_narrow = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int notification_template_media = 2130968607;
+			public const int notification_template_lines = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int notification_template_part_chronometer = 2130968608;
+			public const int notification_template_media = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int notification_template_part_time = 2130968609;
+			public const int notification_template_part_chronometer = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int SampleLayout = 2130968610;
+			public const int notification_template_part_time = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int select_dialog_item_material = 2130968611;
+			public const int register_teacher_contact_frag_layout = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int select_dialog_multichoice_material = 2130968612;
+			public const int register_teacher_dob_frag_layout = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int select_dialog_singlechoice_material = 2130968613;
-
-			public const int SelectSchoolLocation = 2130968613;
+			public const int register_teacher_gender_frag_layout = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int SignIn = 2130968614;
+			public const int register_teacher_meta_layout = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int support_simple_spinner_dropdown_item = 2130968615;
+			public const int SampleLayout = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int Welcome = 2130968616;
+			public const int select_classroom = 2130968616;
+			
+			// aapt resource value: 0x7f040029
+			public const int select_dialog_item_material = 2130968617;
+			
+			// aapt resource value: 0x7f04002a
+			public const int select_dialog_multichoice_material = 2130968618;
+			
+			// aapt resource value: 0x7f04002b
+			public const int select_dialog_singlechoice_material = 2130968619;
+			
+			// aapt resource value: 0x7f04002c
+			public const int SelectSchoolLocation = 2130968620;
+			
+			// aapt resource value: 0x7f04002d
+			public const int SignIn = 2130968621;
+			
+			// aapt resource value: 0x7f04002e
+			public const int subject_frag_layout = 2130968622;
+			
+			// aapt resource value: 0x7f04002f
+			public const int support_simple_spinner_dropdown_item = 2130968623;
+			
+			// aapt resource value: 0x7f040030
+			public const int Welcome = 2130968624;
 			
 			static Layout()
 			{
