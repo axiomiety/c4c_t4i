@@ -1,30 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataModels;
 using System.Windows;
 
+
 namespace PathViewModels
 {
-    public class TeacherViewModel
+    public class TeacherViewModel : INotifyPropertyChanged
     {
         private ISchoolService _service;
 
         public TeacherViewModel(ISchoolService service)
         {
             this._service = service;
-            if(this._service.Class != null)
-            {
-                this.Class = this._service.Class;
-                this.School = this._service.Class.School;
-                this.Country = this._service.Class.School.Country;
-                this.State = this._service.Class.School.State;
-                this.City = this._service.Class.School.City;
-            }
         }
-
 
         public IList<string> Countries
         {
@@ -34,28 +27,85 @@ namespace PathViewModels
             }
         }
 
-        public string Country { get; set; }
+        private string _country;
+
+        public string Country {
+            get
+            {
+                return _country;
+            }
+            set
+            {
+                _country = value;
+                RaisePropertyChanged("Country");
+                RaisePropertyChanged("States");
+                State = "";
+            }
+        }
 
         public IList<string> States
         {
             get { return this._service.GetStates(this.Country); }
         }
 
-        public string State { get; set; }
+        private string _state;
+        public string State
+        {
+            get
+            {
+                return _state;
+            }
+            set
+            {
+                _state = value;
+                RaisePropertyChanged("State");
+                RaisePropertyChanged("Cities");
+                City = "";
+            }
+        }
+
         public IList<string> Cities
         {
             get { return this._service.GetCities(this.Country, this.State); }
         }
 
-        public string City { get; set; }
-
+        private string _city;
+        public string City
+        {
+            get
+            {
+                return _city;
+            }
+            set
+            {
+                _city = value;
+                RaisePropertyChanged("City");
+                RaisePropertyChanged("Schools");
+                School = null;
+            }
+        }
 
         public IList<ISchool> Schools
         {
             get { return this._service.GetSchools(this.Country, this.State, this.City); }
         }
 
-        public ISchool School { get; set; }
+        private ISchool _school;
+
+        public ISchool School
+        {
+            get
+            {
+                return _school;
+            }
+            set
+            {
+                _school = value;
+                RaisePropertyChanged("School");
+                RaisePropertyChanged("Classes");
+                Class = null;
+            }
+        }
 
         public IList<IClass> Classes
         {
@@ -63,5 +113,12 @@ namespace PathViewModels
         }
 
         public IClass Class { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void RaisePropertyChanged(string propertyName)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
