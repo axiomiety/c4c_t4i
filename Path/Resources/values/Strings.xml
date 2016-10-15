@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">Path</string>
 	<string-array name="gender_dropdown_array">
 		<item>Please choose</item>
@@ -21,4 +20,10 @@
 		<item>D</item>
 		<item>E</item>
 	</string-array>
+	<!-- Firebase C4C T4I App Setings -->
+	<string name="ApplicationName">c4c-t4i</string>
+	<string name="ServerClientId">338211353991-urcc5h7gfd5qoppndv23a2vkqb5f6m1e.apps.googleusercontent.com</string>
+	<string name="ApiKey">AIzaSyBNUiwOjLnILeorZzGbZ-Gy787zCfi0Ef8</string>
+	<string name="ApplicationId">1:338211353991:android:1ef65a1e5ea1f998</string>
+	<string name="DatabaseUrl">https://c4c-t4i.firebaseio.com</string>
 </resources>

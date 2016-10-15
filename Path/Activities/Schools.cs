@@ -87,7 +87,7 @@ namespace Path
         }
     }
 
-    [Activity(Label = "Schools", MainLauncher = true, Theme = "@style/Theme.AppCompat")]
+    [Activity(Label = "Schools", MainLauncher = false, Theme = "@style/Theme.AppCompat")]
     public class SchoolsActivity : AppCompatActivity
     {
         RecyclerView view;

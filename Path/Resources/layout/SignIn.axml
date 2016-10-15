@@ -1,44 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/signin">
     <TextView
         android:text="PATH"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/pathtitle"
-        android:layout_alignParentStart="true"
-        android:textStyle="bold"
-        android:layout_alignWithParentIfMissing="true"
-        android:layout_centerHorizontal="true"
+        style="@style/LargeWhiteCenter"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:typeface="normal"
-        android:textSize="@dimen/abc_text_size_display_3_material"
-        android:gravity="center"
-        android:textColor="#ffffffff"
         android:layout_marginTop="100dp" />
     <TextView
         android:text="for TEACHERS"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/teacherstitle"
-        android:gravity="center"
+        style="@style/MediumWhiteCenter"
         android:layout_below="@id/pathtitle"
-        android:typeface="normal"
-        android:textColor="#ffffffff"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="40dp" />
     <ImageButton
         android:id="@+id/loginbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/teacherstitle"
-        android:layout_marginTop="150dip"
-        android:layout_gravity="center"
         android:src="@drawable/login_button"
-        android:background="@null" />
-</LinearLayout>
+        style="@style/CenterTrnspBg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp" />
+</RelativeLayout>

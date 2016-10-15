@@ -4,7 +4,7 @@ using Android.Widget;
 
 namespace Path
 {
-	[Activity(Label = "Welcome", MainLauncher = true, Theme = "@style/MatLightNoActionBar")]
+	[Activity(Label = "Welcome")]
 	public class Welcome : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
