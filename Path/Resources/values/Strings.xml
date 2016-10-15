@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">Path</string>
+  <string name="hints_roll_no">Roll no.</string>
+  <string name="hints_student_name">Student Name</string>
 	<string-array name="gender_dropdown_array">
 		<item>Please choose</item>
 		<item>Male</item>
