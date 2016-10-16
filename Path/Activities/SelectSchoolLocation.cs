@@ -20,6 +20,13 @@ namespace Path
 			var autocompleteTextView = FindViewById<AutoCompleteTextView>(Resource.Id.schoolCountry);
 			autocompleteTextView.Adapter = autoCompleteAdapter;
 
+			ImageButton next = FindViewById<ImageButton>(Resource.Id.schoolNext);
+
+			next.Click += delegate
+			{
+				StartActivity(typeof(RegisterTeacherMetaActivity));
+			};
+
 		}
 	}
 }

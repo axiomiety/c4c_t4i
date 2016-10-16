@@ -139,6 +139,8 @@
     <Compile Include="Activities\SelectClassroomFrag.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="App\AppPreferences.cs" />
+    <Compile Include="Adaptors\ChooseLangAdaptor.cs" />
+    <Compile Include="RowItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -161,6 +163,7 @@
     <AndroidResource Include="Resources\layout\select_classroom.axml" />
     <AndroidResource Include="Resources\layout\subject_frag_layout.axml" />
     <None Include="packages.config" />
+    <AndroidResource Include="Resources\layout\CustomListViewRow.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -215,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\" />
+    <Folder Include="Adaptors\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
