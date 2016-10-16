@@ -9,6 +9,8 @@ namespace PathDataModels
 {
     public class SchoolService : ISchoolService
     {
+        private ISchool _school;
+
         public SchoolService()
         {
             // Add logic here to connect to server code
@@ -65,7 +67,12 @@ namespace PathDataModels
         {
             get
             {
+                if (_school != null) return _school;
                 return this.Class != null ? this.Class.School : null;
+            }
+            set
+            {
+                _school = value;
             }
         }
         public string Country
@@ -140,6 +147,8 @@ namespace PathDataModels
         {
             throw new NotImplementedException();
         }
+        public void MapToSchool(ISchool school)
+        { }
 
         #endregion
 
@@ -159,6 +168,7 @@ namespace PathDataModels
     {
         List<ISchool> _schools = new List<ISchool>();
         IAcademicYear _year;
+        ISchool _school;
 
         public MockSchoolService()
         {
@@ -167,16 +177,16 @@ namespace PathDataModels
             School s3 = new School(this, 1, "School3", SchoolType.PrivateSchool, "Community3", "Indonesia", "IN", "Jakarta");
 
             IAcademicYear ay1 = s1.CreateNewAcademicYear(null, "2015-2016", new DateTime(2015, 4, 1), new DateTime(2016, 3, 31), 200);
-            IClass c1 = s1.AddClass(ay1, "4A", Shift.Morning, 6);
-            IClass c2 = s1.AddClass(ay1, "5A", Shift.Morning, 4);
+            IClass c1 = s1.AddClass(ay1, "4", "A", Shift.Morning, 6);
+            IClass c2 = s1.AddClass(ay1, "5", "A", Shift.Morning, 4);
             s1.MoveToAcademicYear(ay1);
 
             IAcademicYear ay2 = s2.CreateNewAcademicYear(null, "2015-2016", new DateTime(2015, 4, 1), new DateTime(2016, 3, 31), 200);
-            IClass c3 = s2.AddClass(ay2, "4A", Shift.Morning, 6);
+            IClass c3 = s2.AddClass(ay2, "4", "A", Shift.Morning, 6);
             s2.MoveToAcademicYear(ay2);
 
             IAcademicYear ay3 = s3.CreateNewAcademicYear(null, "2015-2016", new DateTime(2015, 4, 1), new DateTime(2016, 3, 31), 200);
-            IClass c4 = s3.AddClass(ay3, "1A", Shift.Morning, 6);
+            IClass c4 = s3.AddClass(ay3, "1", "A", Shift.Morning, 6);
             s3.MoveToAcademicYear(ay3);
 
             ISubject sb1 = c1.AddSubject("Maths");
@@ -249,7 +259,12 @@ namespace PathDataModels
         {
             get
             {
+                if (_school != null) return _school;
                 return this.Class != null ? this.Class.School : null;
+            }
+            set
+            {
+                _school = value;
             }
         }
         public string Country
@@ -273,8 +288,6 @@ namespace PathDataModels
                 return this.School != null ? this.School.City : "";
             }
         }
-
-
 
         public IList<string> GetCountries()
         {
@@ -321,6 +334,10 @@ namespace PathDataModels
         public ITeacher GetTeacher(string mail)
         {
             throw new NotImplementedException();
+        }
+        public void MapToSchool(ISchool school)
+        {
+            Teacher.School = school;
         }
 
         public int Save(IStudent student) { return 0; }

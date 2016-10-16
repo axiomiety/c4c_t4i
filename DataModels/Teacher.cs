@@ -17,6 +17,7 @@ namespace DataModels
             PhoneNumber = phone;
             Email = email;
             Subjects = new Dictionary<IClass, IList<ISubject>>();
+            MisInfo = new Dictionary<string, object>();
         }
         public Teacher(ISchoolService service, string name, string email, string phone) :
             this(service, 0, name, email, phone)
@@ -27,6 +28,8 @@ namespace DataModels
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public ISchoolService Service { get; set; }
+        public ISchool School { get; set; }
+        public IDictionary<string, object> MisInfo { get; set; }
 
         public IDictionary<IClass, IList<ISubject>> Subjects { get; private set; }
         public IList<IClass> Classes

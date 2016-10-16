@@ -10,6 +10,7 @@ namespace DataModels
     {
         int ID { get; }
         string Name { get; }
+        IDictionary<string, object> MisInfo { get; set; }
         ISchoolService Service { get; }
 
         void Save();

@@ -19,6 +19,7 @@ namespace DataModels
             DateOfBirth = dob;
             YOI = yoi;
             Classes = classes != null ? classes : new List<IClass>();
+            MisInfo = new Dictionary<string, object>();
         }
         public Student(ISchoolService service, string rollNo, string name, Gender gender, DateTime dob, int yoi, IList<IClass> classes = null) :
             this(service, 0, rollNo, name, gender, dob, yoi, classes) {}
@@ -30,6 +31,7 @@ namespace DataModels
         public Gender Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
         public int YOI { get; set; }
+        public IDictionary<string, object> MisInfo { get; set; }
 
         public IList<IClass> Classes { get; private set; }
 

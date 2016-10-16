@@ -17,7 +17,7 @@ using Firebase.Auth;
 
 namespace Path
 {
-	[Activity(Label = "Login", MainLauncher = true)]
+	[Activity(Label = "Login", MainLauncher = false)]
 	public class GoogleLogin : FragmentActivity, GoogleApiClient.IOnConnectionFailedListener,
 		View.IOnClickListener, IOnCompleteListener, FirebaseAuth.IAuthStateListener
 	{

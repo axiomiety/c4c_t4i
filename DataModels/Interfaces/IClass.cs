@@ -11,6 +11,8 @@ namespace DataModels
         IAcademicYear AcademicYear { get; set; }
         ISchool School { get; set; }
         Shift Shift { get; set; }
+        string Grade { get; set; }
+        string Section { get; set; }
         int DailyInstructionHours { get; set; }
         IList<ISubject> Subjects { get; }
         IDictionary<ISubject, ITeacher> Teachers { get; set; }

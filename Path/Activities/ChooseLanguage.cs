@@ -23,7 +23,7 @@ namespace Path
 
 			next.Click += delegate
 			{
-				StartActivity(typeof(SelectSchoolLocation));
+				StartActivity(typeof(SchoolSelection));
 			};
 		}
 	}

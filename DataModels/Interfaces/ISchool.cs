@@ -19,7 +19,7 @@ namespace DataModels
         IList<IClass> Classes { get; }
 
         IAcademicYear CreateNewAcademicYear(IAcademicYear prevYear, string name, DateTime start, DateTime end, int days);
-        IClass AddClass(IAcademicYear year, string name, Shift shift, int dailyHours);
+        IClass AddClass(IAcademicYear year, string grade, string section, Shift shift, int dailyHours);
         IClass GetNextClass(IClass cls, IAcademicYear year);
         void MoveToAcademicYear(IAcademicYear year);
     }

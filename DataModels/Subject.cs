@@ -14,12 +14,14 @@ namespace DataModels
             Service = service;
             ID = id;
             Name = name;
+            MisInfo = new Dictionary<string, object>();
         }
         public Subject(ISchoolService service, string name) : this(service, 0, name) { }
 
         public int ID { get; set; }
         public string Name { get; set; }
         public ISchoolService Service { get; set; }
+        public IDictionary<string, object> MisInfo { get; set; }
 
         public void Save()
         {

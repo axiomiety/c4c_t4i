@@ -22,7 +22,9 @@ namespace DataModels
             City = city;
             DaysYearly = new Dictionary<IAcademicYear, int>();
             ClassesByYear = new Dictionary<IAcademicYear, IList<IClass>>();
+            MisInfo = new Dictionary<string, object>();
         }
+
         public School(ISchoolService service, string name, SchoolType type, string community,
             string country, string state, string city)
             : this(service, 0, name, type, community, country, state, city)
@@ -40,6 +42,7 @@ namespace DataModels
         public IDictionary<IAcademicYear, int> DaysYearly { get;  }
         public IDictionary<IAcademicYear, IList<IClass>> ClassesByYear { get; }
         public IAcademicYear AcademicYear { get; private set; }
+        public IDictionary<string, object> MisInfo { get; set; }
         public IList<IClass> Classes
         {
             get
@@ -82,7 +85,7 @@ namespace DataModels
             AcademicYear = year;
         }
 
-        public IClass AddClass(IAcademicYear year, string name, Shift shift, int dailyHours)
+        public IClass AddClass(IAcademicYear year, string grade, string section, Shift shift, int dailyHours)
         {
             if (!ClassesByYear.ContainsKey(year))
             {
@@ -90,12 +93,12 @@ namespace DataModels
             }
             foreach (IClass cls in ClassesByYear[year])
             {
-                if (cls.Name == name && cls.Shift == shift && cls.DailyInstructionHours == dailyHours)
+                if (cls.Grade == grade && cls.Section == section && cls.Shift == shift && cls.DailyInstructionHours == dailyHours)
                 {
                     throw new Exception("Given class is already part of this school");
                 }
             }
-            IClass newCls = new Class(Service, name, year, this, shift, dailyHours);
+            IClass newCls = new Class(Service, grade, section, year, this, shift, dailyHours);
             ClassesByYear[year].Add(newCls);
             return newCls;
         }

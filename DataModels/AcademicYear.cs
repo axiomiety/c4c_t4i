@@ -16,6 +16,7 @@ namespace DataModels
             Name = name;
             StartDate = startDate;
             EndDate = endDate;
+            MisInfo = new Dictionary<string, object>();
         }
         public AcademicYear(ISchoolService service, string name, DateTime startDate, DateTime endDate)
             : this(service, 0, name, startDate, endDate)
@@ -26,6 +27,7 @@ namespace DataModels
         public string Name { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public IDictionary<string, object> MisInfo { get; set; }
 
         public void Save()
         {

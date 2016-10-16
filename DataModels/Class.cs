@@ -8,12 +8,15 @@ namespace DataModels
 {
     public class Class : IClass
     {
+        private string _name;
+
         public Class() { }
-        public Class(ISchoolService service, int id, string name, IAcademicYear year, ISchool school, Shift shift, int hours)
+        public Class(ISchoolService service, int id, string grade, string section, IAcademicYear year, ISchool school, Shift shift, int hours)
         {
             Service = service;
             ID = id;
-            Name = name;
+            Grade = grade;
+            Section = section;
             AcademicYear = year;
             School = school;
             Shift = shift;
@@ -22,12 +25,14 @@ namespace DataModels
             Teachers = new Dictionary<ISubject, ITeacher>();
             Students = new List<IStudent>();
         }
-        public Class(ISchoolService service, string name, IAcademicYear year, ISchool school, Shift shift, int hours)
-            : this(service, 0, name, year, school, shift, hours)
+        public Class(ISchoolService service, string grade, string section, IAcademicYear year, ISchool school, Shift shift, int hours)
+            : this(service, 0, grade, section, year, school, shift, hours)
         { }
         public Class(IClass otherClass, IAcademicYear year)
         {
             Service = otherClass.Service;
+            Grade = otherClass.Grade;
+            Section = otherClass.Section;
             Name = otherClass.Name;
             AcademicYear = year;
             School = otherClass.School;
@@ -36,11 +41,25 @@ namespace DataModels
             Subjects = new List<ISubject>();
             Teachers = new Dictionary<ISubject, ITeacher>();
             Students = new List<IStudent>();
+            MisInfo = new Dictionary<string, object>();
         }
 
         public ISchoolService Service { get; set; }
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string Grade { get; set; }
+        public string Section { get; set; }
+        public string Name
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(_name)) return _name;
+                return string.Format("{0}{1}", Grade, Section);
+            }
+            set
+            {
+                _name = value;
+            }
+        }
         public IAcademicYear AcademicYear { get; set; }
         public ISchool School { get; set; }
         public Shift Shift { get; set; }
@@ -48,6 +67,7 @@ namespace DataModels
         public IList<ISubject> Subjects { get; }
         public IDictionary<ISubject, ITeacher> Teachers { get; set; }
         public IList<IStudent> Students { get; set; }
+        public IDictionary<string, object> MisInfo { get; set; }
 
         public IStudent AddStudent(string rollNo, string name, Gender gender, DateTime dob, int yoi)
         {

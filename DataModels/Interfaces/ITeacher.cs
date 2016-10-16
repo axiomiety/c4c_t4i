@@ -10,6 +10,7 @@ namespace DataModels
     {
         string Email { get; }
         string PhoneNumber { get; }
+        ISchool School{ get; set; }
         IDictionary<IClass, IList<ISubject>> Subjects { get; }
         IList<IClass> Classes { get; }
 

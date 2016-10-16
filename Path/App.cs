@@ -22,7 +22,7 @@ namespace Path
         {
             var builder = new ContainerBuilder();
             builder.RegisterInstance(new MockSchoolService()).As<ISchoolService>();
-            builder.RegisterType(typeof(TeacherViewModel));
+            builder.RegisterType(typeof(SchoolSelectionViewModel));
 
             Container = builder.Build();
         }

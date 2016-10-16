@@ -19,7 +19,7 @@ namespace DataModels
         ITeacher Teacher { get; set; }
         IClass Class { get; set; }
         IList<ISubject> Subjects { get; }
-        ISchool School { get; }
+        ISchool School { get; set; }
         string Country { get; }
         string State { get; }
         string City { get; }
@@ -30,6 +30,7 @@ namespace DataModels
         IList<ISchool> GetSchools(string country, string state, string city);
         ISchool AddSchool(string name, SchoolType type, string community, string country, string state, string city);
         ITeacher GetTeacher(string mail);
+        void MapToSchool(ISchool school);
         ITeacher MapTeacher(string mail, string name, string phone, IClass cls, IList<ISubject> subjects);
 
         int Save(IStudent student);

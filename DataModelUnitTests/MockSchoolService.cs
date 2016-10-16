@@ -11,24 +11,25 @@ namespace DataModelUnitTests
     {
         List<ISchool> _schools = new List<ISchool>();
         IAcademicYear _year;
+        ISchool _school;
 
         public MockSchoolService()
         {
-            School s1 = new School(this, 1, "School1", SchoolType.PrivateSchool, "Community1", "India", "MH", "Mumbai");
-            School s2 = new School(this, 1, "School2", SchoolType.PrivateSchool, "Community2", "India", "TN", "Chennai");
-            School s3 = new School(this, 1, "School3", SchoolType.PrivateSchool, "Community3", "Indonesia", "IN", "Jakarta");
+            School s1 = new School(this, 1, "School1", SchoolType.PrivateSchool, "Community1", "India", "Maharashtra", "Mumbai");
+            School s2 = new School(this, 1, "School2", SchoolType.PrivateSchool, "Community2", "India", "TamilNadu", "Chennai");
+            School s3 = new School(this, 1, "School3", SchoolType.PrivateSchool, "Community3", "Indonesia", "Indo", "Jakarta");
 
             IAcademicYear ay1 = s1.CreateNewAcademicYear(null, "2015-2016", new DateTime(2015, 4, 1), new DateTime(2016, 3, 31), 200);
-            IClass c1 = s1.AddClass(ay1, "4A", Shift.Morning, 6);
-            IClass c2 = s1.AddClass(ay1, "5A", Shift.Morning, 4);
+            IClass c1 = s1.AddClass(ay1, "4", "A", Shift.Morning, 6);
+            IClass c2 = s1.AddClass(ay1, "5", "A", Shift.Morning, 4);
             s1.MoveToAcademicYear(ay1);
 
             IAcademicYear ay2 = s2.CreateNewAcademicYear(null, "2015-2016", new DateTime(2015, 4, 1), new DateTime(2016, 3, 31), 200);
-            IClass c3 = s2.AddClass(ay2, "4A", Shift.Morning, 6);
+            IClass c3 = s2.AddClass(ay2, "4", "A", Shift.Morning, 6);
             s2.MoveToAcademicYear(ay2);
 
             IAcademicYear ay3 = s3.CreateNewAcademicYear(null, "2015-2016", new DateTime(2015, 4, 1), new DateTime(2016, 3, 31), 200);
-            IClass c4 = s3.AddClass(ay3, "1A", Shift.Morning, 6);
+            IClass c4 = s3.AddClass(ay3, "1", "A", Shift.Morning, 6);
             s3.MoveToAcademicYear(ay3);
 
             ISubject sb1 = c1.AddSubject("Maths");
@@ -99,7 +100,12 @@ namespace DataModelUnitTests
         public ISchool School {
             get
             {
+                if (_school != null) return _school;
                 return this.Class != null ? this.Class.School : null;
+            }
+            set
+            {
+                _school = value;
             }
         }
         public string Country {
@@ -131,24 +137,36 @@ namespace DataModelUnitTests
         }
         public IList<string> GetStates(string country)
         {
-            var query = from ISchool school in Schools
-                        where school.Country == country
-                        select school.State;
-            return query.Distinct().ToList<string>();
+            if (country.Length == 0)
+            {
+                var query = from ISchool school in Schools
+                            where school.Country == country
+                            select school.State;
+                return query.Distinct().ToList<string>();
+            }
+            return new List<String>();
         }
         public IList<string> GetCities(string country, string state)
         {
-            var query = from ISchool school in Schools
-                        where school.Country == country && school.State == state
-                        select school.City;
-            return query.Distinct().ToList<string>();
+            if (state.Length == 0)
+            {
+                var query = from ISchool school in Schools
+                            where school.Country == country && school.State == state
+                            select school.City;
+                return query.Distinct().ToList<string>();
+            }
+            return new List<string>();
         }
         public IList<ISchool> GetSchools(string country, string state, string city)
         {
-            var query = from ISchool school in Schools
-                        where school.Country == country && school.State == state && school.City == city
-                        select school;
-            return query.ToList<ISchool>();
+            if (state.Length == 0 && city.Length == 0)
+            {
+                var query = from ISchool school in Schools
+                            where school.Country == country && school.State == state && school.City == city
+                            select school;
+                return query.ToList<ISchool>();
+            }
+            return new List<ISchool>();
         }
         public ISchool AddSchool(string name, SchoolType type, string community, string country, string state, string city)
         {
@@ -156,6 +174,7 @@ namespace DataModelUnitTests
             school.Save();
             return school;
         }
+
         public ITeacher MapTeacher(string mail, string name, string phone, IClass cls, IList<ISubject> subjects)
         {
             Teacher teacher = new Teacher(this, name, mail, phone);
@@ -165,9 +184,15 @@ namespace DataModelUnitTests
             }
             return teacher;
         }
+
         public ITeacher GetTeacher(string mail)
         {
             throw new NotImplementedException();
+        }
+
+        public void MapToSchool(ISchool school)
+        {
+            Teacher.School = school;
         }
 
         public int Save(IStudent student) { return 0; }
