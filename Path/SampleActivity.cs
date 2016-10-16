@@ -14,7 +14,7 @@ using Autofac;
 
 namespace Path
 {
-    [Activity(Label = "Path", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "Path", MainLauncher = false, Icon = "@mipmap/icon")]
     public class SampleActivity : Activity
     {
         TeacherViewModel _model;

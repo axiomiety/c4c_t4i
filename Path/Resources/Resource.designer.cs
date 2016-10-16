@@ -3007,23 +3007,23 @@ namespace Path
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f07002f
-			public const int ApiKey = 2131165231;
+			// aapt resource value: 0x7f070031
+			public const int ApiKey = 2131165233;
 			
-			// aapt resource value: 0x7f070030
-			public const int ApplicationId = 2131165232;
+			// aapt resource value: 0x7f070032
+			public const int ApplicationId = 2131165234;
 			
 			// aapt resource value: 0x7f07002c
 			public const int ApplicationName = 2131165228;
 			
-			// aapt resource value: 0x7f070031
-			public const int DatabaseUrl = 2131165233;
+			// aapt resource value: 0x7f070033
+			public const int DatabaseUrl = 2131165235;
 			
 			// aapt resource value: 0x7f07002b
 			public const int Hello = 2131165227;
 			
-			// aapt resource value: 0x7f07002e
-			public const int ServerClientId = 2131165230;
+			// aapt resource value: 0x7f070030
+			public const int ServerClientId = 2131165232;
 			
 			// aapt resource value: 0x7f070014
 			public const int abc_action_bar_home_description = 2131165204;
@@ -3153,6 +3153,12 @@ namespace Path
 			
 			// aapt resource value: 0x7f070012
 			public const int common_signin_button_text_long = 2131165202;
+			
+			// aapt resource value: 0x7f07002e
+			public const int hints_roll_no = 2131165230;
+			
+			// aapt resource value: 0x7f07002f
+			public const int hints_student_name = 2131165231;
 			
 			// aapt resource value: 0x7f070027
 			public const int status_bar_notification_info_overflow = 2131165223;

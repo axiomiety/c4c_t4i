@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.OS;
 using Android.Widget;
 
@@ -21,7 +22,15 @@ namespace Path
 			};
 
 			TextView helloUser = FindViewById<TextView>(Resource.Id.helloUser);
-			helloUser.Text = "Hello Shweta";
+			helloUser.Text = "Hello {0}!";
+
+			AppPreferences ap = new AppPreferences(Application.Context);
+
+			if (ap.GetKeyVal("user_name") != null)
+			{
+				string displayName = ap.GetKeyVal("user_name").Split()[0];
+				helloUser.Text = String.Format(helloUser.Text, displayName);
+			}
 		}
 	}
 }

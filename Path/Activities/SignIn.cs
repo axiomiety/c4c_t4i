@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System;
 using Android.App;
 using Android.Content;
 using Android.Gms.Auth.Api;
@@ -25,10 +25,9 @@ namespace Path
 		private const int RcSignIn = 9001;
 
 		private FirebaseAuth mAuth;
-		private GoogleApiClient mGoogleApiClient;
-
 		private FirebaseApp fa;
-		private DatabaseReference mDatabase;
+
+		private GoogleApiClient mGoogleApiClient;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -71,10 +70,11 @@ namespace Path
 
 			if (user != null)
 			{
-				// Add the user to FB
-				var db = FirebaseDatabase.GetInstance(fa);
-				mDatabase = db.GetReference("shwt-test");
-				mDatabase.Child("user").Child(user.Uid).Child(user.DisplayName).SetValue("Test from Path");
+				AppPreferences ap = new AppPreferences(Application.Context);
+				// TODO: find a better way to store user info
+				ap.SaveKeyVal("user_name", user.DisplayName);
+				ap.SaveKeyVal("user_uid", user.Uid);
+
 				StartActivity(typeof(Welcome));
 			}
 			else
