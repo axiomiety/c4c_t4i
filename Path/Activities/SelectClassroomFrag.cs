@@ -14,13 +14,13 @@ namespace Path
 			base.OnCreate(savedInstanceState);
 		}
 
-		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-		{
-			View view = inflater.Inflate(Resource.Layout.class_grade_section_frag_layout, container, false);
-			ImageButton next = view.FindViewById<ImageButton>(Resource.Id.grade_section_next);
-			next.Click += (sender, e) => { ((SelectClassroomActivity)Activity).SwitchToSubjectFrag(); };
-			return view;
-		}
+		//public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		//{
+		//	View view = inflater.Inflate(Resource.Layout.class_grade_section_frag_layout, container, false);
+		//	ImageButton next = view.FindViewById<ImageButton>(Resource.Id.grade_section_next);
+		//	next.Click += (sender, e) => { ((SelectClassroomActivity)Activity).SwitchToSubjectFrag(); };
+		//	return view;
+		//}
 	}
 
 	public class SubjectSelectionFragment : Fragment

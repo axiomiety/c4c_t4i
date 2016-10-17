@@ -83,7 +83,7 @@ namespace Path
 			}
 			else if (currFragment == dobFragment)
 			{
-				StartActivity(typeof(SelectClassroomActivity));
+				//StartActivity(typeof(SelectClassroomActivity));
 			}
 			
 		}

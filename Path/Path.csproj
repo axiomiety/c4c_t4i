@@ -142,10 +142,8 @@
     <Compile Include="Activities\ChooseLanguage.cs" />
     <Compile Include="Activities\SignIn.cs" />
     <Compile Include="Activities\Welcome.cs" />
-    <Compile Include="Activities\SelectSchoolLocation.cs" />
     <Compile Include="Activities\RegisterTeacherMetaActivity.cs" />
     <Compile Include="Activities\RegisterTeacherMetaFrag.cs" />
-    <Compile Include="Activities\SelectClassroomActivity.cs" />
     <Compile Include="Activities\SelectClassroomFrag.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="App\AppPreferences.cs" />
@@ -154,15 +152,11 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\SchoolsRecycler.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\class_grade_section_frag_layout.axml" />
     <AndroidResource Include="Resources\layout\register_teacher_contact_frag_layout.axml" />
     <AndroidResource Include="Resources\layout\register_teacher_dob_frag_layout.axml" />
     <AndroidResource Include="Resources\layout\register_teacher_gender_frag_layout.axml" />
     <AndroidResource Include="Resources\layout\register_teacher_meta_layout.axml" />
-    <AndroidResource Include="Resources\layout\select_classroom.axml" />
     <AndroidResource Include="Resources\layout\subject_frag_layout.axml" />
     <None Include="packages.config" />
     <AndroidResource Include="Resources\layout\SchoolSelection.axml">
@@ -189,7 +183,6 @@
     <AndroidResource Include="Resources\drawable\choose_lang.png" />
     <AndroidResource Include="Resources\drawable\next_button.png" />
     <AndroidResource Include="Resources\drawable\select_location.png" />
-    <AndroidResource Include="Resources\layout\SelectSchoolLocation.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\cake.png" />
     <AndroidResource Include="Resources\drawable\classroom.png" />
