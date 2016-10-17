@@ -134,6 +134,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\ClassSelection.cs" />
     <Compile Include="Activities\SchoolSelection.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -164,7 +165,12 @@
     <AndroidResource Include="Resources\layout\select_classroom.axml" />
     <AndroidResource Include="Resources\layout\subject_frag_layout.axml" />
     <None Include="packages.config" />
-    <AndroidResource Include="Resources\layout\SchoolSelection.axml" />
+    <AndroidResource Include="Resources\layout\SchoolSelection.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ClassSelection.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+  <ImageView
+      android:src="@drawable/classroom"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.60"
+      android:id="@+id/clsImg"/>
+  <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_weight=".20"
+        android:layout_marginBottom="0.0dp">
+        <TextView
+            android:text="Grade"
+            android:typeface="normal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/abc_text_size_headline_material"
+            android:paddingBottom="20dp"
+            android:paddingRight="20dp" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spGrade"
+        android:typeface="normal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/abc_text_size_headline_material"
+            android:paddingBottom="20dp"
+        android:paddingRight="20dp" />
+        <TextView
+            android:text="Section"
+            android:typeface="normal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/abc_text_size_headline_material"
+            android:paddingRight="20dp" />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spSection"
+            android:typeface="normal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/abc_text_size_headline_material"
+            android:paddingRight="20dp" />
+    </GridLayout>
+    <ImageButton
+        android:id="@+id/btnClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:layout_gravity="center"
+        android:src="@drawable/next_button"
+        android:background="@null"
+        android:paddingBottom="20dp" />
+</LinearLayout>

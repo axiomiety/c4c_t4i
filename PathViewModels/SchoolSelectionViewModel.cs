@@ -25,6 +25,14 @@ namespace PathViewModels
 
         #region Properties
 
+        public ISchoolService Service
+        {
+            get
+            {
+                return _service;
+            }
+        }
+
         public IList<string> Countries
         {
             get
@@ -225,7 +233,7 @@ namespace PathViewModels
 
         #endregion
 
-        #region
+        #region Persistence
 
         public void Save()
         {
@@ -233,7 +241,6 @@ namespace PathViewModels
         }
 
         #endregion
-
 
         #region Property Changed
 

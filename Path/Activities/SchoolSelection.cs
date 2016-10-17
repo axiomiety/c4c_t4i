@@ -9,7 +9,7 @@ using Java.Lang;
 
 namespace Path
 {
-	[Activity(Label = "Select School", MainLauncher = false, Theme = "@style/MatLightNoActionBar")]
+	[Activity(Label = "Select School", Theme = "@style/MatLightNoActionBar")]
 	public class SchoolSelection : Activity
     {
         SchoolSelectionViewModel _model;
@@ -102,10 +102,11 @@ namespace Path
                 Dialog dialog = errorDialog.Create();
                 dialog.Show();
             }
-            //else
-            //{
-            //    StartActivity(typeof(ClassSelection));
-            //}
+            else
+            {
+                _model.Save();
+                StartActivity(typeof(ClassSelection));
+            }
         }
 
         private void SetError(EditText view, string error)

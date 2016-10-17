@@ -55,7 +55,7 @@ namespace PathViewModels
             {
                 if (Grade.Length != 0)
                 {
-                    return (from IClass cls in _service.School.Classes where cls.Grade == Grade select cls.Grade).ToList<string>();
+                    return (from IClass cls in _service.School.Classes where cls.Grade == Grade select cls.Section).ToList<string>();
                 }
                 return new List<string>();
             }
@@ -136,7 +136,7 @@ namespace PathViewModels
 
         #endregion
 
-        #region
+        #region Persistence
 
         public void Save()
         {
