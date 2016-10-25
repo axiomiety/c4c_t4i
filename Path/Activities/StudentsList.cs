@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Path.Activities
 {
-    [Activity(Label = "StudentsList", MainLauncher = true)]
+    [Activity(Label = "StudentsList", MainLauncher = false)]
     public class StudentsList : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
