@@ -136,6 +136,7 @@
   <ItemGroup>
     <Compile Include="Activities\ClassSelection.cs" />
     <Compile Include="Activities\SchoolSelection.cs" />
+    <Compile Include="Activities\StudentsList.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -163,6 +164,18 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ClassSelection.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\StudentListRowLayoutA.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\StudentList.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\StudentListRowLayoutB.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\StudentListRowLayoutSelected.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
