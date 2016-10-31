@@ -48,10 +48,13 @@ namespace PathViewModels
             }
             set
             {
-                _country = value;
-                RaisePropertyChanged("Country");
-                RaisePropertyChanged("States");
-                State = "";
+                if (_country != value)
+                {
+                    _country = value;
+                    RaisePropertyChanged("Country");
+                    RaisePropertyChanged("States");
+                    State = "";
+                }
             }
         }
 
@@ -68,10 +71,13 @@ namespace PathViewModels
             }
             set
             {
-                _state = value;
-                RaisePropertyChanged("State");
-                RaisePropertyChanged("Cities");
-                City = "";
+                if (_state != value)
+                {
+                    _state = value;
+                    RaisePropertyChanged("State");
+                    RaisePropertyChanged("Cities");
+                    City = "";
+                }
             }
         }
 
@@ -88,10 +94,13 @@ namespace PathViewModels
             }
             set
             {
-                _city = value;
-                RaisePropertyChanged("City");
-                RaisePropertyChanged("Schools");
-                School = null;
+                if (_city != value)
+                {
+                    _city = value;
+                    RaisePropertyChanged("City");
+                    RaisePropertyChanged("Schools");
+                    SchoolName = "";
+                }
             }
         }
 
@@ -116,17 +125,20 @@ namespace PathViewModels
             }
             set
             {
-                _schoolName = value;
-                List<ISchool> match = (from ISchool school in Schools where school.Name == value select school).ToList<ISchool>();
-                if (match.Count != 0)
+                if (_schoolName != value)
                 {
-                    School = match[0];
+                    _schoolName = value;
+                    List<ISchool> match = (from ISchool school in Schools where school.Name == value select school).ToList<ISchool>();
+                    if (match.Count != 0)
+                    {
+                        School = match[0];
+                    }
+                    else
+                    {
+                        School = null;
+                    }
+                    RaisePropertyChanged("SchoolName");
                 }
-                else
-                {
-                    School = null;
-                }
-                RaisePropertyChanged("SchoolName");
             }
         }
 

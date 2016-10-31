@@ -179,6 +179,7 @@ namespace PathDataModels
             IAcademicYear ay1 = s1.CreateNewAcademicYear(null, "2015-2016", new DateTime(2015, 4, 1), new DateTime(2016, 3, 31), 200);
             IClass c1 = s1.AddClass(ay1, "4", "A", Shift.Morning, 6);
             IClass c2 = s1.AddClass(ay1, "5", "A", Shift.Morning, 4);
+            IClass c21 = s1.AddClass(ay1, "5", "B", Shift.Morning, 4);
             s1.MoveToAcademicYear(ay1);
 
             IAcademicYear ay2 = s2.CreateNewAcademicYear(null, "2015-2016", new DateTime(2015, 4, 1), new DateTime(2016, 3, 31), 200);

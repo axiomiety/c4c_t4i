@@ -2219,8 +2219,8 @@ namespace Path
 			// aapt resource value: 0x7f0a0044
 			public const int action_mode_close_button = 2131361860;
 			
-			// aapt resource value: 0x7f0a00af
-			public const int action_search = 2131361967;
+			// aapt resource value: 0x7f0a00b6
+			public const int action_search = 2131361974;
 			
 			// aapt resource value: 0x7f0a0045
 			public const int activity_chooser_view_content = 2131361861;
@@ -2333,8 +2333,8 @@ namespace Path
 			// aapt resource value: 0x7f0a008f
 			public const int end_padder = 2131361935;
 			
-			// aapt resource value: 0x7f0a00a7
-			public const int english_checkbox = 2131361959;
+			// aapt resource value: 0x7f0a00ae
+			public const int english_checkbox = 2131361966;
 			
 			// aapt resource value: 0x7f0a002b
 			public const int enterAlways = 2131361835;
@@ -2351,6 +2351,9 @@ namespace Path
 			// aapt resource value: 0x7f0a0059
 			public const int expanded_menu = 2131361881;
 			
+			// aapt resource value: 0x7f0a00a8
+			public const int explorePathButton = 2131361960;
+			
 			// aapt resource value: 0x7f0a003d
 			public const int fill = 2131361853;
 			
@@ -2363,14 +2366,17 @@ namespace Path
 			// aapt resource value: 0x7f0a0040
 			public const int @fixed = 2131361856;
 			
-			// aapt resource value: 0x7f0a00ae
-			public const int getStartedButton = 2131361966;
+			// aapt resource value: 0x7f0a00ab
+			public const int gender = 2131361963;
+			
+			// aapt resource value: 0x7f0a00b5
+			public const int getStartedButton = 2131361973;
 			
 			// aapt resource value: 0x7f0a0075
 			public const int grade_section_next = 2131361909;
 			
-			// aapt resource value: 0x7f0a00aa
-			public const int helloUser = 2131361962;
+			// aapt resource value: 0x7f0a00b1
+			public const int helloUser = 2131361969;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int home = 2131361797;
@@ -2393,11 +2399,11 @@ namespace Path
 			// aapt resource value: 0x7f0a008e
 			public const int info = 2131361934;
 			
-			// aapt resource value: 0x7f0a00ac
-			public const int intro1 = 2131361964;
+			// aapt resource value: 0x7f0a00b3
+			public const int intro1 = 2131361971;
 			
-			// aapt resource value: 0x7f0a00ad
-			public const int intro2 = 2131361965;
+			// aapt resource value: 0x7f0a00b4
+			public const int intro2 = 2131361972;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int item_touch_helper_previous_elevation = 2131361792;
@@ -2426,8 +2432,8 @@ namespace Path
 			// aapt resource value: 0x7f0a00a6
 			public const int loginbutton = 2131361958;
 			
-			// aapt resource value: 0x7f0a00a8
-			public const int math_checkbox = 2131361960;
+			// aapt resource value: 0x7f0a00af
+			public const int math_checkbox = 2131361967;
 			
 			// aapt resource value: 0x7f0a0086
 			public const int media_actions = 2131361926;
@@ -2489,8 +2495,14 @@ namespace Path
 			// aapt resource value: 0x7f0a009b
 			public const int register_meta_imgView = 2131361947;
 			
+			// aapt resource value: 0x7f0a00ac
+			public const int reporter = 2131361964;
+			
 			// aapt resource value: 0x7f0a0038
 			public const int right = 2131361848;
+			
+			// aapt resource value: 0x7f0a00aa
+			public const int rollno = 2131361962;
 			
 			// aapt resource value: 0x7f0a00a2
 			public const int school = 2131361954;
@@ -2615,8 +2627,14 @@ namespace Path
 			// aapt resource value: 0x7f0a0085
 			public const int status_bar_latest_event_content = 2131361925;
 			
+			// aapt resource value: 0x7f0a00a7
+			public const int studentListView = 2131361959;
+			
 			// aapt resource value: 0x7f0a00a9
-			public const int subject_tick = 2131361961;
+			public const int studentname = 2131361961;
+			
+			// aapt resource value: 0x7f0a00b0
+			public const int subject_tick = 2131361968;
 			
 			// aapt resource value: 0x7f0a006d
 			public const int submit_area = 2131361901;
@@ -2684,14 +2702,17 @@ namespace Path
 			// aapt resource value: 0x7f0a0009
 			public const int up = 2131361801;
 			
+			// aapt resource value: 0x7f0a00ad
+			public const int updateButton = 2131361965;
+			
 			// aapt resource value: 0x7f0a001c
 			public const int useLogo = 2131361820;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int view_offset_helper = 2131361802;
 			
-			// aapt resource value: 0x7f0a00ab
-			public const int welcomeToPath = 2131361963;
+			// aapt resource value: 0x7f0a00b2
+			public const int welcomeToPath = 2131361970;
 			
 			// aapt resource value: 0x7f0a0010
 			public const int wide = 2131361808;
@@ -2924,13 +2945,25 @@ namespace Path
 			public const int SignIn = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int subject_frag_layout = 2130968633;
+			public const int StudentList = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int support_simple_spinner_dropdown_item = 2130968634;
+			public const int StudentListRowLayoutA = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int Welcome = 2130968635;
+			public const int StudentListRowLayoutB = 2130968635;
+			
+			// aapt resource value: 0x7f04003c
+			public const int StudentListRowLayoutSelected = 2130968636;
+			
+			// aapt resource value: 0x7f04003d
+			public const int subject_frag_layout = 2130968637;
+			
+			// aapt resource value: 0x7f04003e
+			public const int support_simple_spinner_dropdown_item = 2130968638;
+			
+			// aapt resource value: 0x7f04003f
+			public const int Welcome = 2130968639;
 			
 			static Layout()
 			{

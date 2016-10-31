@@ -19,6 +19,7 @@ namespace Path
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.ClassSelection);
             _model = App.Container.Resolve<ClassSelectionViewModel>();
+            _model.PropertyChanged += _model_PropertyChanged;
 
             _spGrade = FindViewById<Spinner>(Resource.Id.spGrade);
             _spGrade.ItemSelected += GradeSelected;
@@ -31,10 +32,48 @@ namespace Path
             btnClass.Click += ClassSelected;
         }
 
+        private void _model_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            switch(e.PropertyName)
+            {
+                case "Grade":
+                    Model_GradeChanged();
+                    break;
+                case "Sections":
+                    Model_SectionsChanged();
+                    break;
+                case "Section":
+                    Model_SectionChanged();
+                    break;
+            }
+        }
+
+        private void Model_GradeChanged()
+        {
+            string value = _spGrade.SelectedItem != null ? _spGrade.SelectedItem.ToString() : "";
+            if (value != _model.Grade)
+            {
+                _spGrade.SetSelection(_model.Grades.IndexOf(_model.Grade));
+            }
+        }
+
+        private void Model_SectionsChanged()
+        {
+            _spSection.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerDropDownItem, _model.Sections);
+        }
+
+        private void Model_SectionChanged()
+        {
+            string value = _spSection.SelectedItem != null ? _spSection.SelectedItem.ToString() : "";
+            if (value != _model.Section)
+            {
+                _spSection.SetSelection(_model.Sections.IndexOf(_model.Section));
+            }
+        }
+
         private void GradeSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             _model.Grade = e.Parent.GetItemAtPosition(e.Position).ToString();
-            _spSection.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerDropDownItem, _model.Sections);
         }
 
         private void SectionSelected(object sender, AdapterView.ItemSelectedEventArgs e)

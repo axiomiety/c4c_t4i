@@ -43,9 +43,13 @@ namespace PathViewModels
             }
             set
             {
-                _grade = value;
-                RaisePropertyChanged("Grade");
-                RaisePropertyChanged("Sections");
+                if (_grade != value)
+                {
+                    _grade = value == null ? Grades[0] : value;
+                    RaisePropertyChanged("Grade");
+                    RaisePropertyChanged("Sections");
+                    Section = null;
+                }
             }
         }
 
@@ -55,7 +59,7 @@ namespace PathViewModels
             {
                 if (Grade.Length != 0)
                 {
-                    return (from IClass cls in _service.School.Classes where cls.Grade == Grade select cls.Section).ToList<string>();
+                    return (from IClass cls in _service.School.Classes where cls.Grade == Grade select cls.Section).Distinct().ToList<string>();
                 }
                 return new List<string>();
             }
@@ -69,8 +73,11 @@ namespace PathViewModels
             }
             set
             {
-                _section = value;
-                RaisePropertyChanged("Section");
+                if (_section != value)
+                {
+                    _section = value == null ? Sections[0] : value;
+                    RaisePropertyChanged("Section");
+                }
             }
         }
 

@@ -19,6 +19,7 @@ namespace Path
 		{
 			base.OnCreate(savedInstanceState);
             _model = App.Container.Resolve<SchoolSelectionViewModel>();
+            _model.PropertyChanged += _model_PropertyChanged;
 
             SetContentView(Resource.Layout.SchoolSelection);
 
@@ -40,55 +41,107 @@ namespace Path
             btnSchool.Click += SchoolSelected;
         }
 
+        private void _model_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            Console.WriteLine(e.PropertyName);
+            switch(e.PropertyName)
+            {
+                case "Country":
+                    Model_CountryChanged();
+                    break;
+                case "States":
+                    Model_StatesChanged();
+                    break;
+                case "State":
+                    Model_StateChanged();
+                    break;
+                case "Cities":
+                    Model_CitiesChanged();
+                    break;
+                case "City":
+                    Model_CityChanged();
+                    break;
+                case "Schools":
+                    Model_SchoolsChanged();
+                    break;
+                case "SchoolName":
+                    Model_SchoolChanged();
+                    break;
+            }
+        }
+
+        private void Model_CountryChanged()
+        {
+            if (_avCountry.Text != _model.Country)
+            {
+                _avCountry.Text = _model.Country;
+            }
+            SetError(_avCountry, _model.CountryError);
+        }
+
+        private void Model_StatesChanged()
+        {
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _model.States);
+            _avState.Adapter = adapter;
+        }
+
+        private void Model_StateChanged()
+        {
+            if (_avState.Text != _model.State)
+            {
+                _avState.Text = _model.State;
+            }
+            SetError(_avState, _model.StateError);
+        }
+
+        private void Model_CitiesChanged()
+        {
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _model.Cities);
+            _avCity.Adapter = adapter;
+        }
+
+        private void Model_CityChanged()
+        {
+            if (_avCity.Text != _model.City)
+            {
+                _avCity.Text = _model.City;
+            }
+            SetError(_avCity, _model.CityError);
+        }
+
+        private void Model_SchoolsChanged()
+        {
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _model.SchoolNames);
+            _avSchool.Adapter = adapter;
+        }
+
+        private void Model_SchoolChanged()
+        {
+            if (_avSchool.Text != _model.SchoolName)
+            {
+                _avSchool.Text = _model.SchoolName;
+            }
+            SetError(_avSchool, _model.SchoolError);
+        }
+
         private void CountryChanged(object sender, View.FocusChangeEventArgs e)
         {
-            if (_model.Country != _avCountry.Text)
-            {
-                _model.Country = _avCountry.Text;
-                SetError(_avCountry, _model.CountryError);
-                ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _model.States);
-                _avState.Adapter = adapter;
-                _avState.Text = "";
-                _avCity.Text = "";
-                _avSchool.Text = "";
-                ClearError(_avState);
-                ClearError(_avCity);
-                ClearError(_avSchool);
-            }
+            _model.Country = _avCountry.Text;
         }
 
         private void StateChanged(object sender, View.FocusChangeEventArgs e)
         {
-            if (_model.State != _avState.Text)
-            {
-                _model.State = _avState.Text;
-                SetError(_avState, _model.StateError);
-                ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _model.Cities);
-                _avCity.Adapter = adapter;
-                _avCity.Text = "";
-                _avSchool.Text = "";
-                ClearError(_avCity);
-                ClearError(_avSchool);
-            }
+            _model.State = _avState.Text;
         }
 
         private void CityChanged(object sender, View.FocusChangeEventArgs e)
         {
-            if (_model.City != _avCity.Text)
-            {
-                _model.City = _avCity.Text;
-                SetError(_avCity, _model.CityError);
-                ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _model.SchoolNames);
-                _avSchool.Adapter = adapter;
-                _avSchool.Text = "";
-                ClearError(_avSchool);
-            }
+            _model.City = _avCity.Text;
         }
 
         private void SchoolChanged(object sender, View.FocusChangeEventArgs e)
         {
             _model.SchoolName = _avSchool.Text;
-            SetError(_avSchool, _model.SchoolError);
         }
 
         private void SchoolSelected(object sender, EventArgs e)
@@ -111,12 +164,7 @@ namespace Path
 
         private void SetError(EditText view, string error)
         {
-            view.SetError(error, GetDrawable(Resource.Drawable.abc_ic_star_black_36dp));
-        }
-
-        private void ClearError(EditText view)
-        {
-            SetError(view, "");
+            view.Error = string.IsNullOrEmpty(error) ? null : error;
         }
     }
 }
