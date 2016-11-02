@@ -9,9 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/addAStudent"
-        android:padding="20pd" />
-  <include layout="@layout/StudentListRowLayoutSelected"/>
-  <!--
+        android:padding="20dp" />
+    <include
+        layout="@layout/StudentListRowLayoutSelected" />
+<!--
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
