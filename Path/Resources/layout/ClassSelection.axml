@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
-  <ImageView
-      android:src="@drawable/classroom"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="0.60"
-      android:id="@+id/clsImg"/>
-  <GridLayout
+    android:orientation="vertical"
+    android:background="@drawable/classroom_bg">
+    <TextView
+        android:text="Select your Classroom"
+        android:id="@+id/classroomTitle"
+        style="@style/MediumWhiteCenter"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:paddingLeft="30dp" />
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:rowCount="2"
         android:columnCount="2"
+        android:layout_centerInParent="true"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:layout_weight=".20"
-        android:layout_marginBottom="0.0dp">
+        android:layout_marginBottom="0.0dp"
+        android:paddingTop="120dp">
         <TextView
             android:text="Grade"
             android:typeface="normal"
@@ -25,15 +30,15 @@
             android:textSize="@dimen/abc_text_size_headline_material"
             android:paddingBottom="20dp"
             android:paddingRight="20dp" />
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spGrade"
-        android:typeface="normal"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="@dimen/abc_text_size_headline_material"
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spGrade"
+            android:typeface="normal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/abc_text_size_headline_material"
             android:paddingBottom="20dp"
-        android:paddingRight="20dp" />
+            android:paddingRight="20dp" />
         <TextView
             android:text="Section"
             android:typeface="normal"
@@ -51,11 +56,8 @@
     </GridLayout>
     <ImageButton
         android:id="@+id/btnClass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.10"
-        android:layout_gravity="center"
         android:src="@drawable/next_button"
-        android:background="@null"
-        android:paddingBottom="20dp" />
-</LinearLayout>
+        style="@style/CenterTrnspBg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp" />
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/class_students_bg">
+    <TextView
+        android:text="Students in your Class                            "
+        android:id="@+id/intro2"
+        style="@style/MediumWhiteCenter"
+        android:layout_marginTop="50dp"
+        android:gravity="center" />
+    <TextView
+        android:text="We have found 24 students in your class"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:id="@+id/textView1"
+        android:gravity="center" />
+    <TextView
+        android:text="VIEW STUDENTS"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="220dp"
+        android:gravity="center"
+        android:textColor="#ff5aa6f0" />
+</LinearLayout>

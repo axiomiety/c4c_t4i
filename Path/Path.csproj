@@ -18,6 +18,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -30,14 +31,8 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
-    <BundleAssemblies>False</BundleAssemblies>
-    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <Debugger>Xamarin</Debugger>
-    <AotAssemblies>False</AotAssemblies>
-    <EnableLLVM>False</EnableLLVM>
-    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
-    <EnableProguard>False</EnableProguard>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -143,22 +138,18 @@
     <Compile Include="Activities\ChooseLanguage.cs" />
     <Compile Include="Activities\SignIn.cs" />
     <Compile Include="Activities\Welcome.cs" />
-    <Compile Include="Activities\RegisterTeacherMetaActivity.cs" />
-    <Compile Include="Activities\RegisterTeacherMetaFrag.cs" />
-    <Compile Include="Activities\SelectClassroomFrag.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="App\AppPreferences.cs" />
+    <Compile Include="Activities\SelectGender.cs" />
+    <Compile Include="Activities\SelectDOB.cs" />
+    <Compile Include="Activities\SelectContact.cs" />
+    <Compile Include="Activities\SelectSubjects.cs" />
+    <Compile Include="Activities\ClassroomStudents.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\class_grade_section_frag_layout.axml" />
-    <AndroidResource Include="Resources\layout\register_teacher_contact_frag_layout.axml" />
-    <AndroidResource Include="Resources\layout\register_teacher_dob_frag_layout.axml" />
-    <AndroidResource Include="Resources\layout\register_teacher_gender_frag_layout.axml" />
-    <AndroidResource Include="Resources\layout\register_teacher_meta_layout.axml" />
-    <AndroidResource Include="Resources\layout\subject_frag_layout.axml" />
     <None Include="packages.config" />
     <AndroidResource Include="Resources\layout\SchoolSelection.axml">
       <SubType>Designer</SubType>
@@ -178,6 +169,16 @@
     <AndroidResource Include="Resources\layout\StudentListRowLayoutSelected.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\ClassroomStudents.axml" />
+    <AndroidResource Include="Resources\drawable\classroom_students.png" />
+    <AndroidResource Include="Resources\layout\SelectGender.axml" />
+    <AndroidResource Include="Resources\drawable\gender_bg.png" />
+    <AndroidResource Include="Resources\layout\SelectDOB.axml" />
+    <AndroidResource Include="Resources\layout\SelectContact.axml" />
+    <AndroidResource Include="Resources\drawable\dob_bg.png" />
+    <AndroidResource Include="Resources\layout\SelectSubjects.axml" />
+    <AndroidResource Include="Resources\drawable\classroom_bg.png" />
+    <AndroidResource Include="Resources\drawable\class_students_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -222,12 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\SchoolsSearch.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\School.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adaptors\" />

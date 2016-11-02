@@ -95,6 +95,7 @@ namespace Path
             else
             {
                 _model.Save();
+				StartActivity(typeof(SelectSubjects));
             }
         }
 

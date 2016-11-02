@@ -29,9 +29,9 @@ namespace Path
 
 			var trans = this.FragmentManager.BeginTransaction();
 			trans.Add(Resource.Id.classroom_meta_frag_container, subjectSelectionFrag, "subjectSelectionFrag");
-			trans.Hide(subjectSelectionFrag);
-			trans.Add(Resource.Id.classroom_meta_frag_container, classGradeSelectionFrag, "classGradeSelectionFrag");
-			trans.Show(classGradeSelectionFrag);
+			trans.Show(subjectSelectionFrag);
+			//trans.Add(Resource.Id.classroom_meta_frag_container, classGradeSelectionFrag, "classGradeSelectionFrag");
+			//trans.Show(classGradeSelectionFrag);
 			currFrag = classGradeSelectionFrag;
 
 			trans.Commit();

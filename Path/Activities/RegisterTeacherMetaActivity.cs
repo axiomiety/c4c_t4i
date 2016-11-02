@@ -11,6 +11,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using DataModels;
+using PathDataModels;
+using Autofac;
+
 namespace Path
 {
 	[Activity(Label = "RegisterTeacherMetaActivity", Theme = "@style/MatLightNoActionBar")]
@@ -21,7 +25,7 @@ namespace Path
 		RegisterTeacherContactFrag contactFragment;
 		RegisterTeacherDOBFrag dobFragment ;
 		Stack<Fragment> fragStack = new Stack<Fragment>();
-
+		ISchoolService _service = App.Container.Resolve<ISchoolService>();
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -83,7 +87,7 @@ namespace Path
 			}
 			else if (currFragment == dobFragment)
 			{
-				//StartActivity(typeof(SelectClassroomActivity));
+				StartActivity(typeof(SchoolSelection));
 			}
 			
 		}

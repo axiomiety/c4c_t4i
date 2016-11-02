@@ -147,6 +147,9 @@ namespace PathViewModels
 
         public void Save()
         {
+			_service.Class = Class;
+
+
             _service.Teacher.Classes.Add(Class);
         }
 

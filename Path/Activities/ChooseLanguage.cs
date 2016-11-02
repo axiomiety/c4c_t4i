@@ -26,7 +26,7 @@ namespace Path
 
 			next.Click += delegate
 			{
-				StartActivity(typeof(SchoolSelection));
+				StartActivity(typeof(SelectGender));
 			};
 		}
 

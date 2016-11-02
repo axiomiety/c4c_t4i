@@ -5,7 +5,7 @@ using Android.Widget;
 
 namespace Path
 {
-	[Activity(Label = "Welcome", MainLauncher = true)]
+	[Activity(Label = "Welcome", MainLauncher = false)]
 	public class Welcome : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)

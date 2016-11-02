@@ -14,10 +14,13 @@ using Android.Util;
 using Firebase;
 using Firebase.Database;
 using Firebase.Auth;
+using DataModels;
+using PathViewModels;
+using Autofac;
 
 namespace Path
 {
-	[Activity(Label = "Login", MainLauncher = false)]
+	[Activity(Label = "Login", MainLauncher = true)]
 	public class GoogleLogin : FragmentActivity, GoogleApiClient.IOnConnectionFailedListener,
 		View.IOnClickListener, IOnCompleteListener, FirebaseAuth.IAuthStateListener
 	{
@@ -28,6 +31,8 @@ namespace Path
 		private FirebaseApp fa;
 
 		private GoogleApiClient mGoogleApiClient;
+
+		ITeacher teacher;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -71,10 +76,14 @@ namespace Path
 			if (user != null)
 			{
 				AppPreferences ap = new AppPreferences(Application.Context);
+
 				// TODO: find a better way to store user info
 				ap.SaveKeyVal("user_name", user.DisplayName);
 				ap.SaveKeyVal("user_uid", user.Uid);
 
+				ISchoolService _service = App.Container.Resolve<ISchoolService>();
+				teacher = new Teacher(_service, 1, user.DisplayName, user.Email, user.Uid);
+				_service.Teacher = teacher;
 				StartActivity(typeof(Welcome));
 			}
 			else

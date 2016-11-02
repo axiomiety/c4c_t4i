@@ -9,13 +9,14 @@ namespace DataModels
     public class Teacher : ITeacher
     {
         public Teacher() { }
-        public Teacher(ISchoolService service, int id, string name, string email, string phone)
+        public Teacher(ISchoolService service, int id, string name, string email, string loginId="", string phone = "")
         {
             Service = service;
             ID = id;
             Name = name;
             PhoneNumber = phone;
             Email = email;
+			LoginID = loginId;
             Subjects = new Dictionary<IClass, IList<ISubject>>();
             MisInfo = new Dictionary<string, object>();
         }
@@ -27,7 +28,8 @@ namespace DataModels
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
-        public ISchoolService Service { get; set; }
+        public string LoginID { get; set; }
+		public ISchoolService Service { get; set; }
         public ISchool School { get; set; }
         public IDictionary<string, object> MisInfo { get; set; }
 
