@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\ClassSelection.cs" />
+    <Compile Include="Activities\ClassStudentView.cs" />
     <Compile Include="Activities\SchoolSelection.cs" />
     <Compile Include="Activities\StudentsList.cs" />
     <Compile Include="App.cs" />
@@ -179,6 +180,9 @@
     <AndroidResource Include="Resources\layout\SelectSubjects.axml" />
     <AndroidResource Include="Resources\drawable\classroom_bg.png" />
     <AndroidResource Include="Resources\drawable\class_students_bg.png" />
+    <AndroidResource Include="Resources\layout\ClassStudentView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
