@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\ClassSelection.cs" />
+    <Compile Include="Activities\ClassStudentView.cs" />
     <Compile Include="Activities\SchoolSelection.cs" />
     <Compile Include="Activities\StudentsList.cs" />
     <Compile Include="App.cs" />
@@ -176,6 +177,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\StudentListRowLayoutSelected.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ClassStudentView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

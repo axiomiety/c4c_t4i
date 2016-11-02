@@ -1,22 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+  <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rollno"
+        android:hint="Roll No."
+        android:layout_weight="2" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentname"
+        android:hint="Student Name"
+        android:layout_weight="1" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <TextView
+        android:text="Gender"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/genderLabel"
+        android:layout_weight="1" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender"
+        android:layout_weight="1" />
+    <ImageButton
+        android:src="@android:drawable/ic_input_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateButton"
+        android:layout_weight="1" />
+  </LinearLayout>
+    <!--
+    <EditText
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:padding="10dp"
         android:inputType="text"
+        android:id="@+id/rollno" />
+    <EditText
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/rollno"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:inputType="text"
         android:id="@+id/studentname" />
+    <TextView
+        android:text="Gender"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rollno"
+        android:id="@+id/gender"
+        android:typeface="normal"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/abc_text_size_headline_material" />
+    <Spinner
+        android:entries="@array/gender_dropdown_array"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gender"
+        android:id="@+id/genderSpinner"
+        android:contentDescription="Choose gender"
+        android:layout_below="@id/studentname" />
     <ImageButton
         android:id="@+id/updateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/studentname"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/tick"
-        android:background="@null"
-        android:paddingBottom="20dp" />
-</RelativeLayout>
+        android:layout_below="@id/studentname"
+        android:layout_toRightOf="@id/genderSpinner"
+        android:src="@android:drawable/ic_input_add"
+        android:background="@null" />
+        -->
+</LinearLayout>
