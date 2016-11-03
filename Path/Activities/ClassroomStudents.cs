@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace Path
 {
-    [Activity(Label = "ClassroomStudents", Theme = "@style/MatLightNoActionBar", MainLauncher = true)]
+    [Activity(Label = "ClassroomStudents", Theme = "@style/MatLightNoActionBar", MainLauncher = false)]
     public class ClassroomStudents : Activity
 	{
         StudentsViewModel _model;
