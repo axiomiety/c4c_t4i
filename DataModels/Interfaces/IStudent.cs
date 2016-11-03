@@ -9,6 +9,7 @@ namespace DataModels
     public interface IStudent : INamedEntity
     {
         string RollNumber { get; set; }
+        new string Name { get; set; }
         Gender Gender { get; set; }
         DateTime DateOfBirth { get; set; }
         // What is this?

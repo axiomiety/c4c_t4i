@@ -1,49 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@drawable/layout_border"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <LinearLayout
+    <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <EditText
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rollno"
+            android:hint="Roll No."
+            android:layout_weight="2" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/studentname"
+            android:hint="Student Name"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rollno"
-        android:hint="Roll No."
-        android:layout_weight="2" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/studentname"
-        android:hint="Student Name"
-        android:layout_weight="1" />
-  </LinearLayout>
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
-    <TextView
-        android:text="Gender"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/genderLabel"
-        android:layout_weight="1" />
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gender"
-        android:layout_weight="1" />
-    <ImageButton
-        android:src="@android:drawable/ic_input_add"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/updateButton"
-        android:layout_weight="1" />
-  </LinearLayout>
-    <!--
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Gender"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/genderLabel"
+            android:layout_weight="1" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gender"
+            android:layout_weight="1" />
+        <ImageButton
+            android:src="@android:drawable/ic_input_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/updateButton"
+            android:layout_weight="1" />
+        <ImageButton
+            android:src="@android:drawable/ic_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/removeButton"
+            android:layout_weight="1" />
+    </LinearLayout>
+<!--
     <EditText
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"

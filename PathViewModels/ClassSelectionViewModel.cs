@@ -101,7 +101,7 @@ namespace PathViewModels
         {
             get
             {
-                if (Grade.Trim().Length == 0)
+                if (string.IsNullOrEmpty(Grade) || Grade.Trim().Length == 0)
                 {
                     return "Grade cannot be empty";
                 }
@@ -118,7 +118,7 @@ namespace PathViewModels
         {
             get
             {
-                if (Section.Trim().Length == 0)
+                if (string.IsNullOrEmpty(Section) || Section.Trim().Length == 0)
                 {
                     return "Section cannot be empty";
                 }
@@ -148,8 +148,6 @@ namespace PathViewModels
         public void Save()
         {
 			_service.Class = Class;
-
-
             _service.Teacher.Classes.Add(Class);
         }
 

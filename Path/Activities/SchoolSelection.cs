@@ -26,20 +26,22 @@ namespace Path
 			ArrayAdapter<string> autoCompleteAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _model.Countries);
             _avCountry = FindViewById<AutoCompleteTextView> (Resource.Id.schoolCountry);
             _avCountry.Adapter = autoCompleteAdapter;
-            _avCountry.FocusChange += CountryChanged;
+            _avCountry.TextChanged += CountryChanged;
 
             _avState = FindViewById<AutoCompleteTextView>(Resource.Id.schoolState);
-            _avState.FocusChange += StateChanged;
+            _avState.TextChanged += StateChanged;
 
             _avCity = FindViewById<AutoCompleteTextView>(Resource.Id.schoolCity);
-            _avCity.FocusChange += CityChanged;
+            _avCity.TextChanged += CityChanged;
 
             _avSchool = FindViewById<AutoCompleteTextView>(Resource.Id.school);
-            _avSchool.FocusChange += SchoolChanged;
+            _avSchool.TextChanged += SchoolChanged;
 
             ImageButton btnSchool = FindViewById<ImageButton>(Resource.Id.btnSchool);
             btnSchool.Click += SchoolSelected;
         }
+
+        #region Property Changed
 
         private void _model_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
@@ -124,22 +126,26 @@ namespace Path
             SetError(_avSchool, _model.SchoolError);
         }
 
-        private void CountryChanged(object sender, View.FocusChangeEventArgs e)
+        #endregion
+
+        #region Control Change Event Handlers
+
+        private void CountryChanged(object sender, EventArgs e)
         {
             _model.Country = _avCountry.Text;
         }
 
-        private void StateChanged(object sender, View.FocusChangeEventArgs e)
+        private void StateChanged(object sender, EventArgs e)
         {
             _model.State = _avState.Text;
         }
 
-        private void CityChanged(object sender, View.FocusChangeEventArgs e)
+        private void CityChanged(object sender, EventArgs e)
         {
             _model.City = _avCity.Text;
         }
 
-        private void SchoolChanged(object sender, View.FocusChangeEventArgs e)
+        private void SchoolChanged(object sender, EventArgs e)
         {
             _model.SchoolName = _avSchool.Text;
         }
@@ -162,9 +168,15 @@ namespace Path
             }
         }
 
+        #endregion
+
+        #region Helper Methods
+
         private void SetError(EditText view, string error)
         {
             view.Error = string.IsNullOrEmpty(error) ? null : error;
         }
+
+        #endregion
     }
 }

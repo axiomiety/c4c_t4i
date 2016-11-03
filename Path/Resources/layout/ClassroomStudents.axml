@@ -11,20 +11,22 @@
         android:layout_marginTop="50dp"
         android:gravity="center" />
     <TextView
-        android:text="We have found 24 students in your class"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:id="@+id/textView1"
+        android:id="@+id/txtStudentCount"
         android:gravity="center" />
-    <TextView
-        android:text="VIEW STUDENTS"
+    <Button
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="VIEW STUDENTS"
         android:layout_width="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_marginTop="220dp"
         android:gravity="center"
+        android:id="@+id/btnViewStudents"
         android:textColor="#ff5aa6f0" />
 </LinearLayout>

@@ -3,59 +3,67 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="Add a Student"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addAStudent"
-        android:padding="20dp" />
-    <include
-        layout="@layout/StudentListRowLayoutSelected" />
-<!--
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rollno"
-            android:hint="Roll No."
-            android:layout_weight="1" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/studentName"
-            android:hint="Student Name"
-            android:layout_weight="1" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:background="#ff5aa6f0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Gender"
+            android:text="Add a Student"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/genderLabel"
-            android:layout_weight="1" />
-        <Spinner
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/addAStudent"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/genderSpinner"
-            android:layout_weight="1" />
-        <ImageButton
-            android:src="@android:drawable/ic_input_add"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rollno"
+                android:hint="Roll No."
+                android:layout_weight="2" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/studentname"
+                android:hint="Student Name"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/addButtonTop"
-            android:layout_weight="1" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Gender"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderLabel"
+                android:layout_weight="1" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gender"
+                android:layout_weight="1" />
+            <ImageButton
+                android:src="@drawable/next_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/updateButton"
+                android:background="@null"
+                android:layout_weight="1" />
+        </LinearLayout>
     </LinearLayout>
-    -->
     <LinearLayout
         android:orientation="horizontal"
+        android:background="#CCC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -64,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/listViewSummary"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1" />
         <TextView
             android:text="23"
@@ -78,6 +87,5 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/studentListView"
-        android:background="@android:color/background_light" />
+        android:id="@+id/studentListView" />
 </LinearLayout>

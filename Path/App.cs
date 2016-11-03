@@ -24,6 +24,7 @@ namespace Path
             builder.RegisterInstance(new MockSchoolService()).As<ISchoolService>();
             builder.RegisterType(typeof(SchoolSelectionViewModel));
             builder.RegisterType(typeof(ClassSelectionViewModel));
+            builder.RegisterType(typeof(StudentsViewModel));
 
             Container = builder.Build();
         }
