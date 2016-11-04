@@ -66,9 +66,17 @@ namespace DataModels
 
         public void AddToClass(IClass cls)
         {
-            cls.AddStudent(this);
+            //cls.AddStudent(this);
             Classes.Add(cls);
+            Save();
         }
+
+        public void RemoveFromClass(IClass cls)
+        {
+            Classes.Remove(cls);
+            Save();
+        }
+
 
         public void Save()
         {

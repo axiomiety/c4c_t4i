@@ -133,6 +133,7 @@
     <Compile Include="Activities\ClassStudentView.cs" />
     <Compile Include="Activities\SchoolSelection.cs" />
     <Compile Include="Activities\StudentsList.cs" />
+    <Compile Include="Adapters\StudentViewAdapter.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Activities\SelectContact.cs" />
     <Compile Include="Activities\SelectSubjects.cs" />
     <Compile Include="Activities\ClassroomStudents.cs" />
+    <Compile Include="Views\StudentView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

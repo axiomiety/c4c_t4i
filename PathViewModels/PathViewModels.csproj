@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolSelectionViewModel.cs" />
     <Compile Include="StudentsViewModel.cs" />
+    <Compile Include="StudentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

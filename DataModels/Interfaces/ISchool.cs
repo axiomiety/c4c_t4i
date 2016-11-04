@@ -17,6 +17,7 @@ namespace DataModels
         IDictionary<IAcademicYear, IList<IClass>> ClassesByYear { get; }
         IAcademicYear AcademicYear { get; }
         IList<IClass> Classes { get; }
+        IList<IStudent> Students { get; }
 
         IAcademicYear CreateNewAcademicYear(IAcademicYear prevYear, string name, DateTime start, DateTime end, int days);
         IClass AddClass(IAcademicYear year, string grade, string section, Shift shift, int dailyHours);

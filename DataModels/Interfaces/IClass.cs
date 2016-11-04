@@ -25,6 +25,7 @@ namespace DataModels
         void RemoveSubject(ISubject subject);
         void AddTeacher(ITeacher teacher, ISubject subject);
         void RemoveTeacher(ITeacher teacher, ISubject subject);
+        void RemoveStudent(IStudent student);
         
     }
 }

@@ -19,5 +19,6 @@ namespace DataModels
         IClass Class { get; }
 
         void AddToClass(IClass cls);
+        void RemoveFromClass(IClass cls);
     }
 }
