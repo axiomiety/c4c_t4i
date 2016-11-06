@@ -11,18 +11,24 @@ using Android.Views;
 using Android.Widget;
 using DataModels;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace PathViewModels
 {
     public class StudentsViewModel : INotifyPropertyChanged
     {
         ISchoolService _service;
-
         public event PropertyChangedEventHandler PropertyChanged;
+        bool eventRegistered = false;
 
         public StudentsViewModel(ISchoolService service)
         {
             this._service = service;
+        }
+
+        private void StudentsChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            RaisePropertyChanged("Students");
         }
 
         private void RaisePropertyChanged(string propertyName)
@@ -53,7 +59,12 @@ namespace PathViewModels
         {
             get
             {
-                return this.Class.Students;
+                if (!eventRegistered)
+                {
+                    (this.Class.Students as ObservableCollection<IStudent>).CollectionChanged += StudentsChanged;
+                    eventRegistered = true;
+                }
+                return Class.Students;
             }
         }
 
@@ -65,24 +76,5 @@ namespace PathViewModels
             }
         }
 
-
-        public void AddStudent(string rollNo, string name, string gender)
-        {
-            this.Class.AddStudent(rollNo, name, gender == "Male" ? Gender.Male : Gender.Female, DateTime.MinValue, -1);
-            RaisePropertyChanged("Students");
-        }
-
-        public void UpdateStudent(IStudent student, string rollNo, string name, string gender)
-        {
-            student.RollNumber = rollNo;
-            student.Name = name;
-            student.Gender = gender == "Male" ? Gender.Male : Gender.Female;
-            student.Save();
-        }
-
-        public void RemoveStudent(IStudent student)
-        {
-
-        }
     }
 }

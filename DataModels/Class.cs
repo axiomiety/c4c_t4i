@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace DataModels
 {
     public class Class : IClass
     {
         private string _name;
+        private ObservableCollection<IStudent> students = new ObservableCollection<IStudent>();
 
         public Class() { }
         public Class(ISchoolService service, int id, string grade, string section, IAcademicYear year, ISchool school, Shift shift, int hours)
@@ -66,27 +68,40 @@ namespace DataModels
         public int DailyInstructionHours { get; set; }
         public IList<ISubject> Subjects { get; }
         public IDictionary<ISubject, ITeacher> Teachers { get; set; }
-        public IList<IStudent> Students { get; set; }
+        public IList<IStudent> Students {
+            get
+            {
+                return students as IList<IStudent>;
+            }
+            set
+            {
+                students = new ObservableCollection<IStudent>(value);
+            }
+        }
         public IDictionary<string, object> MisInfo { get; set; }
 
         public IStudent AddStudent(string rollNo, string name, Gender gender, DateTime dob, int yoi)
         {
             IStudent student = new Student(Service, rollNo, name, gender, dob, yoi);
-            student.Save();
+            student.AddToClass(this);
             Students.Add(student);
+            Save();
             return student;
         }
 
         public IStudent AddStudent(IStudent student)
         {
+            student.AddToClass(this);
             Students.Add(student);
+            Save();
             return student;
         }
 
         public IClass PromoteStudent(IStudent student, IAcademicYear year)
         {
             IClass nextCls = School.GetNextClass(this, year);
-            student.AddToClass(nextCls);
+            nextCls.AddStudent(student);
+            Save();
             return nextCls;
         }
 
@@ -94,6 +109,7 @@ namespace DataModels
         {
             ISubject subject = new Subject(Service, name);
             Subjects.Add(subject);
+            Save();
             return subject;
         }
 
@@ -103,6 +119,7 @@ namespace DataModels
             {
                 Subjects.Remove(subject);
             }
+            Save();
         }
 
         public void AddTeacher(ITeacher teacher, ISubject subject)
@@ -114,6 +131,8 @@ namespace DataModels
             }
             Teachers.Add(subject, teacher);
             teacher.AddSubject(subject, this);
+            //teacher.Save();
+            Save();
         }
 
         public void RemoveTeacher(ITeacher teacher, ISubject subject)
@@ -124,6 +143,14 @@ namespace DataModels
             }
             Teachers.Remove(subject);
             teacher.RemoveSubject(subject, this);
+            //teacher.Save();
+            Save();
+        }
+
+        public void RemoveStudent(IStudent student)
+        {
+            Students.Remove(student);
+            Save();
         }
 
         public void Save()

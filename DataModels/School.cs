@@ -53,6 +53,14 @@ namespace DataModels
             }
         }
 
+        public IList<IStudent> Students
+        {
+            get
+            {
+                return Classes.SelectMany<IClass, IStudent>((IClass cls) => cls.Students).ToList();
+            }
+        }
+
         public IAcademicYear CreateNewAcademicYear(IAcademicYear prevYear, string name, DateTime start, DateTime end, int days)
         {
             if (prevYear != null && !ClassesByYear.ContainsKey(prevYear))

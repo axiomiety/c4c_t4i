@@ -20,10 +20,10 @@ namespace Path
 		{
 			base.OnCreate(savedInstanceState);
             _model = App.Container.Resolve<StudentsViewModel>();
-            Teacher teacher = new Teacher(_model.Service, 1, "Test", "Test", "Test");
-            _model.Service.Teacher = teacher;
-            _model.Service.School = _model.Service.Schools[0];
-            _model.Service.Class = (from IClass cls in _model.Service.School.Classes where cls.Grade == "4" && cls.Section == "A" select cls).ToList<IClass>()[0];
+            //_model.Service.School = _model.Service.Schools[0];
+            //IClass selClass = (from IClass cls in _model.Service.School.Classes where cls.Grade == "4" && cls.Section == "A" select cls).ToList<IClass>()[0];
+            //_model.Service.Teacher = selClass.Teachers[selClass.Subjects[0]];
+            //_model.Service.Class = selClass;
 
             SetContentView(Resource.Layout.ClassroomStudents);
             TextView txtStudentCount = this.FindViewById<TextView>(Resource.Id.txtStudentCount);
