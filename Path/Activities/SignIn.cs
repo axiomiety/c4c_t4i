@@ -15,20 +15,22 @@ using Firebase;
 using Firebase.Database;
 using Firebase.Auth;
 using DataModels;
-using PathViewModels;
 using Autofac;
+using System.Collections.Generic;
 
 namespace Path
 {
 	[Activity(Label = "Login", MainLauncher = true)]
-	public class GoogleLogin : FragmentActivity, GoogleApiClient.IOnConnectionFailedListener,
+	public class GoogleLogin : FragmentActivity, IValueEventListener, GoogleApiClient.IOnConnectionFailedListener,
 		View.IOnClickListener, IOnCompleteListener, FirebaseAuth.IAuthStateListener
 	{
 		private const string Tag = "GoogleLogin";
 		private const int RcSignIn = 9001;
 
 		private FirebaseAuth mAuth;
-		private FirebaseApp fa;
+		private DatabaseReference mDatabase;
+		private string userId = "";
+		private bool SIGNUP;
 
 		private GoogleApiClient mGoogleApiClient;
 
@@ -49,7 +51,8 @@ namespace Path
 				.SetApplicationId(GetString(Resource.String.ApplicationId))
 				.SetDatabaseUrl(GetString(Resource.String.DatabaseUrl))
 				.Build();
-			fa = FirebaseApp.InitializeApp(this, o, Application.PackageName);
+			FirebaseApp fa = FirebaseApp.InitializeApp(this, o, Application.PackageName);
+			mDatabase = FirebaseDatabase.GetInstance(fa).GetReference("");
 
 			// Configure Google Sign In
 			GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
@@ -68,6 +71,21 @@ namespace Path
 			mAuth = FirebaseAuth.GetInstance(fa);
 		}
 
+		public void OnDataChange(DataSnapshot dataSnapshot)
+		{
+			Log.Debug(Tag, "Database Change: " + dataSnapshot.GetValue(true));
+			if (dataSnapshot.HasChild(userId))
+				SIGNUP = false;
+			else
+				SIGNUP = true;
+			LoginUser(mAuth.CurrentUser);
+		}
+
+		public void OnCancelled(DatabaseError databaseError)
+		{
+			Log.Debug(Tag, "getUser:onCancelled", databaseError.ToException());
+		}
+
 		public void OnAuthStateChanged(FirebaseAuth auth)
 		{
 			var user = auth.CurrentUser;
@@ -75,21 +93,26 @@ namespace Path
 
 			if (user != null)
 			{
-				AppPreferences ap = new AppPreferences(Application.Context);
+				userId = user.Uid;
+				mDatabase.Child("users").AddListenerForSingleValueEvent(this);
+				//LoginUser(user);
+			}
+		}
 
-				// TODO: find a better way to store user info
-				ap.SaveKeyVal("user_name", user.DisplayName);
-				ap.SaveKeyVal("user_uid", user.Uid);
+		private void LoginUser(FirebaseUser user)
+		{
+			ISchoolService _service = App.Container.Resolve<ISchoolService>();
+			// TODO - id of teacher in constructor should not be hard coded
+			teacher = new Teacher(_service, 1, user.DisplayName, user.Email, user.Uid);
+			_service.Teacher = teacher;
 
-				ISchoolService _service = App.Container.Resolve<ISchoolService>();
-				teacher = new Teacher(_service, 1, user.DisplayName, user.Email, user.Uid);
-				_service.Teacher = teacher;
+			if (SIGNUP)
+			{
+				mDatabase.Child("users").Child(user.Uid).SetValue(user);
 				StartActivity(typeof(Welcome));
 			}
 			else
-			{
-				UpdateUi();
-			}
+				StartActivity(typeof(Home));
 		}
 
 		protected override void OnStart()

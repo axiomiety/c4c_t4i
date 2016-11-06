@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:inputType="phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_number"
+        android:singleLine="true"
+        android:phoneNumber="true"
+        android:width="150dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp" />
+    <Button
+        android:text="PUSH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fbPush"
+        android:layout_marginTop="50dp" />
+</LinearLayout>

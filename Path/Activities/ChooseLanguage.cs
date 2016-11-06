@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Path
 {
-	[Activity(Label = "Choose Language", Theme = "@style/MatLightNoActionBar")]
+	[Activity(Label = "Choose Language")]
 	public class ChooseLanguage : ListActivity
 	{
 		string[] langs;

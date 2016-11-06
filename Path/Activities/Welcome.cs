@@ -2,6 +2,8 @@
 using Android.App;
 using Android.OS;
 using Android.Widget;
+using DataModels;
+using Autofac;
 
 namespace Path
 {
@@ -22,14 +24,14 @@ namespace Path
 			};
 
 			TextView helloUser = FindViewById<TextView>(Resource.Id.helloUser);
-			helloUser.Text = "Hello {0}!";
+			helloUser.Text = "Hello!";
 
-			AppPreferences ap = new AppPreferences(Application.Context);
+			ISchoolService _service = App.Container.Resolve<ISchoolService>();
 
-			if (ap.GetKeyVal("user_name") != null)
+			if (_service.Teacher.Name != null)
 			{
-				string displayName = ap.GetKeyVal("user_name").Split()[0];
-				helloUser.Text = String.Format(helloUser.Text, displayName);
+				string displayName = _service.Teacher.Name.Split()[0];
+				helloUser.Text = String.Format("Hello {0}!", displayName);
 			}
 		}
 	}
