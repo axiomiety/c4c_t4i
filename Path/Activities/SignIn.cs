@@ -16,6 +16,10 @@ using Firebase.Database;
 using Firebase.Auth;
 using DataModels;
 using Autofac;
+using System.ComponentModel;
+using System.Collections;
+using System.Reflection;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Path
@@ -99,6 +103,31 @@ namespace Path
 			}
 		}
 
+		private IDictionary<string, object> ObjectToDictionary<T>(T item)
+		where T : class
+			{
+				Type myObjectType = item.GetType();
+				IDictionary<string, object> dict = new Dictionary<string, object>();
+				var indexer = new object[0];
+				PropertyInfo[] properties = myObjectType.GetProperties();
+				foreach (var info in properties)
+				{
+					var value = info.GetValue(item, indexer);
+					dict.Add(info.Name, value);
+				}
+				return dict;
+			}
+
+		public class JavaObject<T> : Java.Lang.Object
+		{
+			public JavaObject(T obj)
+			{
+				this.Value = obj;
+			}
+
+			public T Value { get; private set; }
+		}
+
 		private void LoginUser(FirebaseUser user)
 		{
 			ISchoolService _service = App.Container.Resolve<ISchoolService>();
@@ -109,6 +138,20 @@ namespace Path
 			if (SIGNUP)
 			{
 				mDatabase.Child("users").Child(user.Uid).SetValue(user);
+				//string path = "/teachers/" + user.Uid;
+				//IDictionary teacherValues = (IDictionary)teacher;
+				//IDictionary<string, IDictionary> dict = new Dictionary<string, IDictionary>();
+				//dict.Add(path, teacherValues);
+				//mDatabase.UpdateChildren(dict);
+				var teacherProp = ObjectToDictionary(teacher);
+				// TODO - nested dict
+				foreach (var property in teacherProp)
+				{
+					if (property.Value == null)
+						mDatabase.Child("teachers").Child(user.Uid).Child(property.Key).SetValue("");
+					else
+						mDatabase.Child("teachers").Child(user.Uid).Child(property.Key).SetValue(property.Value.ToString());
+				}
 				StartActivity(typeof(Welcome));
 			}
 			else
